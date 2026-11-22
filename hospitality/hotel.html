@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hotel website preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Playfair+Display:wght@500;600;700&family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f2ea; --paper:#fffdf8; --ink:#1d2a24; --muted:#5f6b64; --line:#e4ddcf;
+  --brand:#21402f; --brand2:#2f5a42; --accent:#b8893b; --accent2:#e3c48a;
+  --sky1:#f3c88a; --sky2:#e98a5b; --hill1:#2f5a42; --hill2:#21402f; --hill3:#162c20;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12}
+h2{font-size:clamp(30px,4vw,46px);margin:8px 0 14px}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.lead{color:var(--muted);font-size:17px;max-width:600px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;font-size:14px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.line{background:transparent;border:1.5px solid currentColor}
+section{padding:96px 0}
+
+/* preview ribbon */
+.ribbon{background:#111;color:#f1ede4;font-size:13px;text-align:center;padding:9px 16px}
+.ribbon b{color:var(--accent2)}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mono{width:44px;height:44px;border-radius:50%;background:var(--brand);color:var(--accent2);display:grid;place-items:center;font-family:var(--serif);font-size:18px;font-weight:700;flex:none}
+.brand b{font-family:var(--serif);font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600}
+.links a:hover{color:var(--accent)}
+@media(max-width:900px){.links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
+.hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.45) 100%)}
+.hero .inner{position:relative;z-index:2;padding:0 24px 56px;max-width:1160px;margin:0 auto;width:100%}
+.hero .eyebrow{color:var(--accent2)}
+.hero h1{font-size:clamp(42px,7vw,86px);max-width:820px;margin:10px 0 14px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero p{font-size:18px;max-width:560px;opacity:.95}
+.badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:6px;backdrop-filter:blur(6px)}
+.book{margin-top:30px;background:var(--paper);color:var(--ink);border-radius:18px;padding:16px;display:grid;grid-template-columns:repeat(3,1fr) auto;gap:12px;box-shadow:0 20px 60px rgba(0,0,0,.25);max-width:860px}
+.book label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:4px}
+.book input,.book select{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;background:#fff}
+.book .btn{align-self:end;height:46px}
+@media(max-width:760px){.book{grid-template-columns:1fr 1fr}.book>div{min-width:0}.book .btn{grid-column:1/-1;justify-content:center}.hero{min-height:auto;padding-top:120px}.nav>.btn{display:none}.brand b{font-size:18px}}
+
+/* direct strip */
+.direct{background:var(--brand);color:#f4efe4;padding:40px 0}
+.direct .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.direct b{display:block;font-family:var(--serif);font-size:20px;color:var(--accent2);margin-bottom:4px}
+.direct p{font-size:14px;opacity:.85}
+@media(max-width:800px){.direct .wrap{grid-template-columns:1fr 1fr}}
+
+/* rooms */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}
+@media(max-width:900px){.grid3{grid-template-columns:1fr}}
+.room{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.room:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.08)}
+.ph{aspect-ratio:4/3;position:relative;display:grid;place-items:center;color:rgba(255,255,255,.9);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.ph svg{position:absolute;inset:0;width:100%;height:100%}
+.ph span{position:relative;background:rgba(0,0,0,.28);padding:6px 12px;border-radius:999px}
+.room .body{padding:22px;flex:1;display:flex;flex-direction:column}
+.room h3{font-size:24px;margin-bottom:6px}
+.feat{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px}
+.feat i{font-style:normal;font-size:12px;font-weight:600;background:var(--bg);padding:5px 10px;border-radius:999px;color:var(--muted)}
+.price{margin-top:auto;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px}
+.price small{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.price b{font-size:18px}
+.price .btn{padding:10px 18px}
+
+/* conferences */
+.conf{background:var(--bg)}
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.pk{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:14px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.pk h3{font-size:20px}.pk p{font-size:14px;color:var(--muted)}
+.pk em{font-style:normal;font-weight:700;color:var(--brand2);white-space:nowrap;font-size:14px}
+.art{border-radius:24px;overflow:hidden;aspect-ratio:5/4;position:relative}
+.art svg{width:100%;height:100%;display:block}
+
+/* amenities */
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips span{border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px 18px;font-weight:600;font-size:15px;display:flex;gap:10px;align-items:center}
+.chips span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+
+/* reviews */
+.reviews{background:var(--brand);color:#f4efe4}
+.reviews .lead{color:rgba(244,239,228,.8)}
+.rating{display:flex;gap:28px;flex-wrap:wrap;margin:34px 0}
+.rating div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:20px 26px;min-width:200px}
+.rating b{font-family:var(--serif);font-size:40px;color:var(--accent2)}
+.rating small{display:block;opacity:.8;font-size:13px}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rv div{border:1px dashed rgba(255,255,255,.3);border-radius:16px;padding:22px;font-size:14px;opacity:.85;min-height:130px}
+@media(max-width:900px){.rv{grid-template-columns:1fr}}
+
+/* location */
+.loc .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
+.loc dl{display:grid;grid-template-columns:auto 1fr;gap:12px 18px;margin-top:16px;font-size:15px}
+.loc dt{color:var(--muted);font-weight:600}
+footer{background:var(--hill3);color:rgba(255,255,255,.75);padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:#fff;font-family:var(--serif);font-size:20px}
+
+/* floating & sticky */
+.wa{position:fixed;right:20px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);border:0;cursor:pointer}
+.wa svg{width:30px;height:30px;fill:#fff}
+.mbar{display:none}
+@media(max-width:760px){
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--paper);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
+  .mbar .btn{flex:1;justify-content:center}
+  .wa{bottom:84px}
+  body{padding-bottom:70px}
+}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:80;display:none;place-items:center;padding:20px}
+.modal.on{display:grid}
+.modal div{background:var(--paper);border-radius:20px;padding:30px;max-width:420px;text-align:center}
+.modal h3{font-size:24px;margin-bottom:10px}.modal p{color:var(--muted);margin-bottom:20px}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="ribbon">Design preview for <b data-name>Your Hotel</b>, prepared by Mark Parseina. Photos and prices are placeholders.</div>
+
+<header><div class="wrap nav">
+  <a href="#top" class="brand"><span class="mono" data-initials>YH</span><span><b data-name>Your Hotel</b><small data-place>Kenya</small></span></a>
+  <nav class="links"><a href="#rooms">Rooms</a><a href="#events" data-confnav>Conferences</a><a href="#dining">Dining</a><a href="#visit">Find us</a></nav>
+  <button class="btn" data-act>Book direct</button>
+</div></header>
+
+<section class="hero" id="top">
+  <svg class="scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" id="scene"></svg>
+  <div class="inner">
+    <span class="badge">&#9733; Book direct for our best rate</span>
+    <div class="eyebrow" data-place>Kenya</div>
+    <h1 data-headline>A warm welcome, every time</h1>
+    <p data-sub>Comfortable rooms, good food and friendly service, a short walk from town.</p>
+    <form class="book" onsubmit="return false">
+      <div><label>Check in</label><input type="date" id="d1"></div>
+      <div><label>Check out</label><input type="date" id="d2"></div>
+      <div><label>Guests</label><select><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>Family</option></select></div>
+      <button class="btn" data-act>Check availability</button>
+    </form>
+  </div>
+</section>
+
+<div class="direct"><div class="wrap">
+  <div><b>Best rate</b><p>Book with us directly and skip the booking site markup.</p></div>
+  <div><b>Fast replies</b><p>Your request lands on our WhatsApp, and we answer in minutes.</p></div>
+  <div><b>Pay your way</b><p>M-Pesa, card or cash on arrival.</p></div>
+  <div><b>Local know how</b><p>Ask us about transfers, tours and the best spots in <span data-town>town</span>.</p></div>
+</div></div>
+
+<section id="rooms"><div class="wrap">
+  <div class="eyebrow">Stay</div>
+  <h2>Rooms made for rest</h2>
+  <p class="lead" data-roomlead>Every room comes with free WiFi, hot showers and breakfast in the morning.</p>
+  <div class="grid3" id="roomgrid"></div>
+</div></section>
+
+<section class="conf" id="events"><div class="wrap split">
+  <div>
+    <div class="eyebrow" data-confeye>Meetings and events</div>
+    <h2 data-conftitle>Conferences that run smoothly</h2>
+    <p class="lead" data-conflead>From board meetings to county workshops and weddings, we handle the room, the meals and the tech so you can focus on your guests.</p>
+    <div style="margin-top:28px" id="packs"></div>
+  </div>
+  <div class="art"><svg viewBox="0 0 500 400" id="confart"></svg></div>
+</div></section>
+
+<section id="dining"><div class="wrap split">
+  <div class="art"><svg viewBox="0 0 500 400" id="dineart"></svg></div>
+  <div>
+    <div class="eyebrow">Eat and drink</div>
+    <h2>Our restaurant and bar</h2>
+    <p class="lead">Breakfast from early, Kenyan favourites and grills through the day, and a relaxed bar in the evening. Open to guests and visitors.</p>
+    <div class="chips" id="amen"></div>
+  </div>
+</div></section>
+
+<section class="reviews"><div class="wrap">
+  <div class="eyebrow" style="color:var(--accent2)">Guest reviews</div>
+  <h2>What guests say</h2>
+  <p class="lead">Your real ratings and reviews from Google and booking sites show here, so new guests can trust you before they call.</p>
+  <div class="rating"><div><b>&#9733; Your rating</b><small>Google reviews</small></div><div><b>&#9733; Your score</b><small>Booking.com and Expedia</small></div></div>
+  <div class="rv"><div>Guest review appears here.</div><div>Guest review appears here.</div><div>Guest review appears here.</div></div>
+</div></section>
+
+<section class="loc" id="visit"><div class="wrap split">
+  <div>
+    <div class="eyebrow">Find us</div>
+    <h2>Getting here</h2>
+    <p class="lead">Directions, parking and a map link, so guests arrive without calling to ask the way.</p>
+    <div class="card" style="margin-top:26px">
+      <dl>
+        <dt>Location</dt><dd data-place>Kenya</dd>
+        <dt>Reception</dt><dd>Open 24 hours</dd>
+        <dt>Check in</dt><dd>From 12:00 noon</dd>
+        <dt>Check out</dt><dd>By 10:00 am</dd>
+        <dt>Contact</dt><dd>Your phone, WhatsApp and email</dd>
+      </dl>
+      <button class="btn" style="margin-top:22px" data-act>Get directions</button>
+    </div>
+  </div>
+  <div class="art"><svg viewBox="0 0 500 400" id="mapart"></svg></div>
+</div></section>
+
+<footer><div class="wrap"><div><b data-name>Your Hotel</b><div data-place>Kenya</div></div><div>Preview by Mark Parseina &middot; 0708 139 438</div></div></footer>
+
+<button class="wa" data-act aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg></button>
+<div class="mbar"><button class="btn line" style="color:var(--brand)" data-act>Call us</button><button class="btn" data-act>Book direct</button></div>
+<div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live website this button sends the guest straight to your WhatsApp or booking form, with their dates filled in. No booking site in the middle.</p><button class="btn" onclick="document.getElementById('modal').classList.remove('on')">Got it</button></div></div>
+
+<script>
+const q=new URLSearchParams(location.search);
+const clip=(s,n)=>(s||'').trim().slice(0,n);
+const name=clip(q.get('name'),70)||'Your Hotel';
+const town=clip(q.get('town'),40);
+const county=clip(q.get('county'),40);
+const style=(q.get('style')||'city').toLowerCase();
+const place=[town,county&&county!==town?county+' County':''].filter(Boolean).join(', ')||'Kenya';
+const initials=name.replace(/&/g,' ').split(/\s+/).filter(w=>/^[A-Za-z]/.test(w)&&!/^(the|and|of|hotel|guest|house|ltd)$/i.test(w)).slice(0,2).map(w=>w[0].toUpperCase()).join('')||name[0];
+
+const S={
+ city:{vars:{'--brand':'#21402f','--brand2':'#2f5a42','--accent':'#b8893b','--accent2':'#e3c48a','--sky1':'#f6cf8f','--sky2':'#e98a5b','--hill1':'#3f6b50','--hill2':'#2a4a37','--hill3':'#162c20','--serif':"'Playfair Display',Georgia,serif"},
+   head:t=>`Your home in ${t||'town'}`, sub:'Comfortable rooms, good food and friendly service, right where your business or travels take you.',
+   rooms:[['Standard Room','A calm, well kept room for a restful night.',['Queen bed','Free WiFi','Breakfast']],['Deluxe Room','More space, a work desk and a view.',['King bed','Work desk','Smart TV']],['Executive Suite','A separate lounge for longer stays.',['Lounge','Mini fridge','Priority check in']]],
+   packs:[['Half day meeting','Room, tea break, lunch and projector','Per person'],['Full day meeting','Room, two tea breaks, lunch and PA system','Per person'],['Residential package','Full day meeting, dinner and a room','Per person']],
+   amen:['Free WiFi','Secure parking','24 hour reception','Conference halls','Restaurant and bar','M-Pesa accepted']},
+ coast:{vars:{'--brand':'#0f4c5c','--brand2':'#156a80','--accent':'#e07a5f','--accent2':'#f6d6ad','--sky1':'#ffd9a0','--sky2':'#f4978e','--hill1':'#2b8a9e','--hill2':'#1d6f82','--hill3':'#0b3440','--serif':"'DM Serif Display',Georgia,serif",'--bg':'#f5efe6'},
+   head:t=>`Sea air and slow days in ${t||'the coast'}`, sub:'Breezy rooms, fresh Swahili food and the Indian Ocean close by. Your coastal escape starts here.',
+   rooms:[['Garden Room','Cool, airy and steps from the pool.',['Air conditioning','Free WiFi','Breakfast']],['Sea View Room','Wake up to the ocean.',['Balcony','King bed','Rain shower']],['Family Suite','Room for everyone, with space to spread out.',['Two bedrooms','Lounge','Kids welcome']]],
+   packs:[['Beach wedding','Venue, setup, catering and a couple’s suite','Ask us'],['Team retreat','Meeting room, meals and an afternoon at the beach','Per person'],['Celebrations','Birthdays and anniversaries by the water','Ask us']],
+   amen:['Swimming pool','Free WiFi','Airport transfers','Restaurant and bar','Tours and excursions','M-Pesa accepted']},
+ farm:{vars:{'--brand':'#7a3e2b','--brand2':'#9b5139','--accent':'#c8873a','--accent2':'#f1d4a8','--sky1':'#f7d9a8','--sky2':'#e8a46d','--hill1':'#8a9a5b','--hill2':'#6b7a42','--hill3':'#3b2a20','--serif':"'Fraunces',Georgia,serif",'--bg':'#f7efe4'},
+   head:t=>`Quiet, homely stays in ${t||'the countryside'}`, sub:'Personal care, home cooked food and a peaceful place to rest. Like staying with friends.',
+   rooms:[['Cosy Room','Simple, clean and quiet.',['Double bed','Hot shower','Breakfast']],['Garden Cottage','Your own space with a veranda.',['Veranda','Kitchenette','Free WiFi']],['Family House','Several bedrooms for groups and families.',['Sleeps 6','Full kitchen','Garden']]],
+   packs:[['Retreats','Quiet space for church, school and team retreats','Ask us'],['Small events','Garden setups for birthdays and family days','Ask us'],['Long stays','Weekly and monthly rates for longer visits','Ask us']],
+   amen:['Free WiFi','Safe parking','Home cooked meals','Garden','Hot water','M-Pesa accepted']}
+};
+const st=S[style]||S.city;
+for(const [k,v] of Object.entries(st.vars)) document.documentElement.style.setProperty(k,v);
+const head=clip(q.get('headline'),90);
+document.title=name+' | '+(town||'Kenya');
+document.querySelectorAll('[data-name]').forEach(e=>e.textContent=name);
+document.querySelectorAll('[data-place]').forEach(e=>e.textContent=place);
+document.querySelectorAll('[data-town]').forEach(e=>e.textContent=town||'town');
+document.querySelectorAll('[data-initials]').forEach(e=>e.textContent=initials);
+document.querySelector('[data-headline]').textContent=head||st.head(town);
+document.querySelector('[data-sub]').textContent=st.sub;
+if(style==='farm'){document.querySelector('[data-confeye]').textContent='Retreats and gatherings';document.querySelector('[data-conftitle]').textContent='Space to gather';document.querySelector('[data-conflead]').textContent='Calm grounds for retreats, family days and small celebrations, with meals made on site.';document.querySelector('[data-confnav]').textContent='Retreats'}
+if(style==='coast'){document.querySelector('[data-confeye]').textContent='Weddings and retreats';document.querySelector('[data-conftitle]').textContent='Celebrate by the ocean';document.querySelector('[data-conflead]').textContent='Beach weddings, team retreats and special days, planned with you from start to finish.';document.querySelector('[data-confnav]').textContent='Events'}
+
+/* art */
+const c=k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+const scene=document.getElementById('scene');
+const sea=style==='coast';
+scene.innerHTML=`<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c('--brand')}"/><stop offset=".55" stop-color="${c('--sky2')}"/><stop offset="1" stop-color="${c('--sky1')}"/></linearGradient><radialGradient id="sun"><stop offset="0" stop-color="#fff6dc"/><stop offset="1" stop-color="${c('--sky1')}" stop-opacity="0"/></radialGradient></defs>
+<rect width="1440" height="900" fill="url(#sky)"/><circle cx="1040" cy="${sea?520:470}" r="260" fill="url(#sun)"/><circle cx="1040" cy="${sea?520:470}" r="70" fill="#fff3d1" opacity=".95"/>
+${sea?`<rect y="560" width="1440" height="340" fill="${c('--hill2')}"/><g fill="#fff" opacity=".18">${Array.from({length:14},(_,i)=>`<rect x="${880+((i*53)%330)}" y="${575+i*16}" width="${120-i*5}" height="3" rx="2"/>`).join('')}</g><path d="M0 760 Q360 700 720 760 T1440 750 V900 H0Z" fill="${c('--hill3')}"/><path d="M120 900 C150 700 190 640 230 610 M230 610 c-60 -10 -120 10 -150 40 M230 610 c-20 -50 -80 -80 -130 -80 M230 610 c40 -40 100 -50 150 -30 M230 610 c60 0 110 30 130 70" stroke="${c('--hill3')}" stroke-width="10" fill="none" stroke-linecap="round"/>`
+:`<path d="M0 600 L240 470 L420 540 L640 360 L780 300 L860 330 L1040 450 L1240 400 L1440 480 V900 H0Z" fill="${c('--hill1')}" opacity=".85"/><path d="M760 310 L780 300 L800 312 L790 330 L770 326Z" fill="#fff" opacity=".7"/><path d="M0 700 Q300 600 620 680 T1440 640 V900 H0Z" fill="${c('--hill2')}"/><path d="M0 800 Q420 720 860 790 T1440 770 V900 H0Z" fill="${c('--hill3')}"/><g fill="${c('--hill3')}"><ellipse cx="300" cy="700" rx="90" ry="18"/><rect x="296" y="700" width="8" height="70"/><ellipse cx="1180" cy="690" rx="70" ry="14"/><rect x="1177" y="690" width="6" height="60"/></g>`}`;
+const photo=(svg,a,b,label,shape)=>{svg.innerHTML=`<defs><linearGradient id="g${label.length}${a.length}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="500" height="400" fill="url(#g${label.length}${a.length})"/>${shape||''}`};
+const roomgrid=document.getElementById('roomgrid');
+st.rooms.forEach((r,i)=>{const d=document.createElement('article');d.className='room reveal';
+ d.innerHTML=`<div class="ph"><svg viewBox="0 0 400 300" preserveAspectRatio="none"><defs><linearGradient id="r${i}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c('--brand2')}"/><stop offset="1" stop-color="${c(i==1?'--accent':'--hill3')}"/></linearGradient></defs><rect width="400" height="300" fill="url(#r${i})"/><rect x="70" y="150" width="260" height="70" rx="10" fill="#fff" opacity=".22"/><rect x="70" y="120" width="260" height="40" rx="8" fill="#fff" opacity=".32"/><rect x="290" y="40" width="70" height="90" rx="6" fill="#fff" opacity=".14"/></svg><span>Your photo here</span></div><div class="body"><h3></h3><p style="color:var(--muted);font-size:15px"></p><div class="feat"></div><div class="price"><div><small>From</small><b>KES your rate</b></div><button class="btn" data-act>Book</button></div></div>`;
+ d.querySelector('h3').textContent=r[0];d.querySelector('p').textContent=r[1];
+ d.querySelector('.feat').innerHTML=r[2].map(x=>`<i>${x}</i>`).join('');roomgrid.appendChild(d)});
+document.getElementById('packs').innerHTML=st.packs.map(p=>`<div class="pk reveal"><div><h3>${p[0]}</h3><p>${p[1]}</p></div><em>${p[2]}</em></div>`).join('');
+document.getElementById('amen').innerHTML=st.amen.map(a=>`<span>${a}</span>`).join('');
+photo(document.getElementById('confart'),c('--brand'),c('--brand2'),'conf',`<g fill="#fff" opacity=".9"><rect x="70" y="70" width="360" height="150" rx="8" opacity=".18"/></g><g fill="#fff" opacity=".3">${[0,1,2,3].map(r=>[0,1,2,3,4].map(k=>`<circle cx="${110+k*70}" cy="${260+r*30}" r="10"/>`).join('')).join('')}</g><text x="250" y="155" text-anchor="middle" fill="#fff" font-family="Manrope" font-size="15" font-weight="700" letter-spacing="3">YOUR EVENT PHOTO</text>`);
+photo(document.getElementById('dineart'),c('--accent'),c('--brand'),'dine',`<circle cx="250" cy="200" r="120" fill="#fff" opacity=".9"/><circle cx="250" cy="200" r="88" fill="${c('--accent2')}"/><circle cx="220" cy="185" r="26" fill="${c('--brand2')}" opacity=".7"/><circle cx="275" cy="215" r="30" fill="${c('--accent')}"/><circle cx="268" cy="170" r="14" fill="#fff" opacity=".6"/><rect x="85" y="110" width="8" height="180" rx="4" fill="#fff" opacity=".8"/><rect x="405" y="110" width="8" height="180" rx="4" fill="#fff" opacity=".8"/>`);
+photo(document.getElementById('mapart'),'#e9e3d6','#ddd4c2','map',`<g stroke="#fff" stroke-width="16" fill="none"><path d="M0 120 L500 260"/><path d="M160 0 L260 400"/><path d="M0 320 Q250 280 500 340"/></g><g stroke="#c9bfab" stroke-width="2" fill="none"><path d="M0 60 L500 120"/><path d="M380 0 L330 400"/></g><circle cx="250" cy="200" r="46" fill="${c('--accent')}" opacity=".2"/><path d="M250 160 c-22 0 -36 16 -36 34 c0 26 36 58 36 58 s36 -32 36 -58 c0 -18 -14 -34 -36 -34z" fill="${c('--brand')}"/><circle cx="250" cy="194" r="12" fill="#fff"/>`);
+
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();document.getElementById('modal').classList.add('on')}));
+const t=new Date(),t2=new Date(Date.now()+864e5),f=d=>d.toISOString().slice(0,10);
+document.getElementById('d1').value=f(t);document.getElementById('d2').value=f(t2);
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

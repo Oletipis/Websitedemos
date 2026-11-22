@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Maasai Beach Bar &amp; Restaurant | Nyali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c8202f;--red2:#9e1522;--blue:#1d3f8f;--sea:#0f6e8c;--sand:#f7ead3;--ink:#1a1412;--sun:#ffb347;--f:'Bricolage Grotesque',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--sand);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-weight:800;line-height:.98;letter-spacing:-.02em}
+h2{font-size:clamp(38px,6vw,72px)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 26px;border-radius:999px;background:var(--red);color:#fff;font:700 15px var(--f);border:0;cursor:pointer;transition:.2s;box-shadow:0 6px 0 var(--red2)}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--red2)}
+.btn.w{background:#fff;color:var(--ink);box-shadow:0 6px 0 #d8cbb3}
+.shuka{height:18px;background:repeating-linear-gradient(90deg,var(--red) 0 34px,var(--blue) 34px 40px,var(--red) 40px 74px,#111 74px 78px),var(--red);background-blend-mode:normal;position:relative}
+.shuka::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 6px,rgba(0,0,0,.25) 6px 8px)}
+.ribbon{background:#111;color:#eee;font-size:13px;text-align:center;padding:9px}.ribbon b{color:var(--sun)}
+header{position:sticky;top:0;z-index:40;background:var(--sand);border-bottom:2px solid var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:12px}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.02em}.logo span{color:var(--red)}
+.links{display:flex;gap:24px;font-weight:600;font-size:15px}
+@media(max-width:860px){.links{display:none}.nav .btn{display:none}}
+.hero{position:relative;overflow:hidden;color:#fff;min-height:86vh;display:flex;align-items:flex-end}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .in{position:relative;z-index:2;padding:120px 22px 70px;max-width:1180px;margin:0 auto;width:100%}
+.hero h1{font-size:clamp(56px,11vw,150px);max-width:1000px;text-shadow:0 4px 40px rgba(0,0,0,.25)}
+.hero p{font-size:20px;max-width:560px;margin:18px 0 30px;font-weight:500}
+.pill{display:inline-flex;gap:10px;align-items:center;background:rgba(0,0,0,.28);backdrop-filter:blur(6px);padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:18px}
+.pill i{width:9px;height:9px;border-radius:50%;background:#43e07d}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.proof{background:var(--ink);color:var(--sand)}
+.proof .wrap{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+.proof div{padding:28px 12px}.proof b{display:block;font-size:40px;color:var(--sun);font-weight:800}.proof span{font-size:14px;opacity:.8}
+@media(max-width:700px){.proof .wrap{grid-template-columns:1fr}.proof div{padding:16px}}
+section{padding:100px 0}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px;margin-top:40px}
+.tile{border-radius:24px;position:relative;overflow:hidden;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;transition:.25s}
+.tile:hover{transform:rotate(-1deg) scale(1.02)}
+.tile h3{font-size:28px}.tile p{font-size:14px;opacity:.9}
+.tile.big{grid-column:span 2;grid-row:span 2}.tile.wide{grid-column:span 2}
+.tile svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}.tile>*:not(svg){position:relative}
+@media(max-width:860px){.tiles{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.tile.big{grid-column:span 2}}
+.tile>.mtag{position:absolute;top:16px;left:16px;background:rgba(0,0,0,.35);border-radius:999px;padding:5px 12px;font-size:11px;letter-spacing:.12em;font-weight:700}
+.nights{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.nights .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:860px){.nights .wrap{grid-template-columns:1fr}}
+.days{display:grid;gap:12px}
+.day{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:18px 22px}
+.day b{font-size:20px}.day span{opacity:.8;font-size:14px}
+.order{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.order{grid-template-columns:1fr}}
+.phone{background:var(--ink);border-radius:40px;padding:14px;max-width:340px;margin:0 auto;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.screen{background:#e5ddd5;border-radius:28px;padding:18px 14px;min-height:440px;display:flex;flex-direction:column;gap:10px;font-size:14px}
+.chat{background:#fff;border-radius:12px;padding:10px 12px;max-width:85%}.chat.me{background:#dcf8c6;align-self:flex-end}
+.chat small{display:block;color:#888;font-size:11px}
+.hrs{background:#fff;border:2px solid var(--ink);border-radius:24px;padding:26px;margin-top:26px}
+.hrs div{display:flex;justify-content:space-between;padding:8px 0;font-weight:600}
+footer{background:var(--ink);color:#cfc3b0;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.mbar{display:none}@media(max-width:860px){.mbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px;background:var(--sand);border-top:2px solid var(--ink)}.mbar .btn{flex:1;justify-content:center}body{padding-bottom:76px}}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;display:none;place-items:center;padding:20px}.modal.on{display:grid}
+.modal div{background:var(--sand);border:2px solid var(--ink);border-radius:24px;padding:30px;max-width:420px;text-align:center}.modal h3{font-size:28px;margin-bottom:10px}.modal p{margin-bottom:20px}
+.rv{opacity:0;transform:translateY(24px);transition:.8s}.rv.in{opacity:1;transform:none}
+</style></head><body>
+<div class="ribbon">Design preview for <b>Maasai Beach Bar &amp; Restaurant</b>, prepared by Mark Parseina. Facts from public listings; menu, prices and photos are placeholders.</div>
+<header><div class="wrap nav"><a class="logo" href="#">Maasai <span>Beach</span></a><nav class="links"><a href="#food">Food</a><a href="#nights">Live music</a><a href="#order">Order</a><a href="#visit">Visit</a></nav><button class="btn" data-act>Book a table</button></div></header>
+<div class="shuka"></div>
+<section class="hero" style="padding:0">
+<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2f6e"/><stop offset=".45" stop-color="#e2585b"/><stop offset=".72" stop-color="#ffb347"/></linearGradient><linearGradient id="se" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b6e8a"/><stop offset="1" stop-color="#0b3a4a"/></linearGradient></defs><rect width="1440" height="900" fill="url(#sk)"/><circle cx="980" cy="560" r="120" fill="#ffd27a"/><rect y="560" width="1440" height="340" fill="url(#se)"/><g fill="#ffd27a" opacity=".55"><rect x="880" y="580" width="200" height="4" rx="2"/><rect x="900" y="600" width="160" height="3" rx="2"/><rect x="920" y="620" width="120" height="3" rx="2"/><rect x="940" y="645" width="80" height="3" rx="2"/></g><path d="M0 800 Q300 760 640 790 T1440 780 V900 H0Z" fill="#f2d7a8"/><g stroke="#1a1412" stroke-width="12" fill="none" stroke-linecap="round"><path d="M1260 900 C1250 760 1230 680 1200 620"/></g><g fill="#1a1412"><path d="M1200 620 c-70 -20 -140 0 -180 40 c60 -10 120 -10 180 -40z"/><path d="M1200 620 c-30 -60 -100 -90 -160 -80 c50 20 110 50 160 80z"/><path d="M1200 620 c30 -60 100 -80 160 -60 c-60 10 -110 30 -160 60z"/><path d="M1200 620 c70 -10 130 20 160 70 c-50 -30 -110 -50 -160 -70z"/></g></svg>
+<div class="in"><span class="pill"><i></i>Open today &middot; your hours here</span><h1>Feet in the sand. Food on the table.</h1><p>Nyama choma, coastal dishes and cold drinks right on Nyali beach, with live music on the night.</p><div class="ctas"><button class="btn" data-act>Order on WhatsApp</button><button class="btn w" data-act>Book a beach table</button></div></div>
+</section>
+<div class="shuka"></div>
+<div class="proof"><div class="wrap"><div><b>4.2 &#9733;</b><span>From 2,338 online reviews</span></div><div><b>Beachfront</b><span>Mount Kenya Road, Nyali</span></div><div><b>Live music</b><span>Nights on the beach</span></div></div></div>
+
+<section id="food"><div class="wrap"><h2 class="rv">Made for sharing, <span style="color:var(--red)">by the sea</span></h2>
+<div class="tiles">
+<div class="tile big rv"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#c8202f"/><circle cx="210" cy="190" r="130" fill="#f7ead3"/><circle cx="210" cy="190" r="100" fill="#8a3a1c"/><circle cx="180" cy="160" r="30" fill="#b5592b"/><circle cx="240" cy="215" r="34" fill="#a24a22"/><circle cx="250" cy="150" r="12" fill="#6aa84f"/></svg><span class="mtag">YOUR PHOTO</span><h3>Nyama choma platter</h3><p>Flame grilled, with kachumbari and ugali</p></div>
+<div class="tile rv"><svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#0f6e8c"/><circle cx="160" cy="110" r="70" fill="#f7ead3"/><circle cx="160" cy="110" r="50" fill="#f2b134"/></svg><span class="mtag">YOUR PHOTO</span><h3>Fish curry</h3><p>Coconut, coast style</p></div>
+<div class="tile rv"><svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#1d3f8f"/><circle cx="160" cy="110" r="70" fill="#f7ead3"/><circle cx="160" cy="110" r="50" fill="#e2585b"/></svg><span class="mtag">YOUR PHOTO</span><h3>Grilled prawns</h3><p>Garlic and chilli</p></div>
+<div class="tile wide rv"><svg viewBox="0 0 600 220" preserveAspectRatio="xMidYMid slice"><rect width="600" height="220" fill="#1a1412"/><rect x="380" y="60" width="40" height="110" rx="8" fill="#ffb347"/><rect x="440" y="50" width="40" height="120" rx="8" fill="#43e07d" opacity=".8"/><rect x="500" y="70" width="40" height="100" rx="8" fill="#e2585b"/></svg><span class="mtag">YOUR PHOTO</span><h3>Ice cold drinks</h3><p>Beers, cocktails and fresh juice at sunset</p></div>
+</div>
+<p style="margin-top:22px;font-size:14px;opacity:.7">Sample dishes. Your full menu and prices go here, easy to update from your phone.</p>
+</div></section>
+
+<section class="nights" id="nights"><div class="wrap">
+<div class="rv"><div style="font-weight:700;letter-spacing:.2em;font-size:13px;color:var(--sun)">LIVE ON THE BEACH</div><h2>Music nights you will talk about on Monday</h2><p style="font-size:18px;opacity:.85;margin:18px 0 28px">Post your weekly line up here so regulars plan their nights around you, and new guests find you when they search.</p><button class="btn" data-act>See this week</button></div>
+<div class="days rv"><div class="day"><div><b>Friday</b><br><span>Live band from 8 pm</span></div><span>Your line up</span></div><div class="day"><div><b>Saturday</b><br><span>DJ on the sand</span></div><span>Your line up</span></div><div class="day"><div><b>Sunday</b><br><span>Family afternoon</span></div><span>Your line up</span></div></div>
+</div></section>
+
+<section id="order"><div class="wrap order">
+<div class="rv"><h2>Order straight from the beach</h2><p style="font-size:18px;margin:18px 0 26px">Customers tap Order, pick their food and send it to your WhatsApp. They pay with M-Pesa. No app takes a cut of your sale.</p><div class="ctas"><button class="btn" data-act>Try the order button</button></div>
+<div class="hrs" id="visit"><b style="font-size:22px">Visit us</b><div><span>Where</span><span>Mount Kenya Road, Nyali, Mombasa</span></div><div><span>Opening hours</span><span>Your hours</span></div><div><span>Call or WhatsApp</span><span>Your number</span></div></div></div>
+<div class="phone rv"><div class="screen"><div class="chat"><small>Maasai Beach</small>Karibu! What can we get you today? &#127958;</div><div class="chat me">1 kg nyama choma, ugali and 2 cold sodas please. Table 6.</div><div class="chat"><small>Maasai Beach</small>Coming right up. Total sent to your M-Pesa. Asante!</div><div class="chat me">Paid &#9989;</div></div></div>
+</div></section>
+<div class="shuka"></div>
+<footer><div class="wrap"><div><b style="color:#fff;font-size:20px">Maasai Beach Bar &amp; Restaurant</b><br>Nyali, Mombasa</div><div>Preview by Mark Parseina &middot; 0708 139 438</div></div></footer>
+<div class="mbar"><button class="btn w" data-act>Book</button><button class="btn" data-act>Order now</button></div>
+<div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live site, this opens WhatsApp with the order or booking already typed out, straight to you.</p><button class="btn" onclick="modal.classList.remove('on')">Got it</button></div></div>
+<script>
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();modal.classList.add('on')}));
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+</script></body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Humphreys Hill House | Kisii</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--em:#163a2e;--em2:#24564444;--leaf:#2f6b52;--champ:#c9a96e;--cream:#f8f4ec;--ink:#1b2620;--muted:#66716a;--line:#e3dccd;--serif:'Cormorant',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-weight:400;line-height:1.7}
+a{color:inherit;text-decoration:none}.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05}
+h2{font-size:clamp(38px,5vw,64px)}
+.eb{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--champ);font-weight:500}
+.btn{display:inline-block;padding:15px 30px;background:var(--champ);color:var(--em);font:500 14px var(--sans);letter-spacing:.12em;text-transform:uppercase;border:0;cursor:pointer;transition:.3s}
+.btn:hover{background:#d9bd87}
+.btn.o{background:transparent;color:var(--cream);border:1px solid rgba(248,244,236,.5)}
+.ribbon{background:#0c1f18;color:#e9e3d6;font-size:13px;text-align:center;padding:9px}.ribbon b{color:var(--champ)}
+header{position:absolute;left:0;right:0;z-index:20;color:var(--cream)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:96px}
+.logo{font-family:var(--serif);font-size:26px;letter-spacing:.04em}.logo small{display:block;font:400 10px var(--sans);letter-spacing:.4em;text-transform:uppercase;opacity:.8}
+.links{display:flex;gap:34px;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+@media(max-width:900px){.links{display:none}.nav .btn{display:none}}
+.hero{position:relative;min-height:100vh;background:var(--em);color:var(--cream);display:flex;align-items:center;overflow:hidden}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:140px 28px 80px;width:100%}
+.hero h1{font-size:clamp(52px,9vw,128px);max-width:900px;margin:18px 0 22px}
+.hero h1 i{color:var(--champ)}
+.hero p{max-width:520px;font-size:18px;font-weight:300;opacity:.92}
+.hero .ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.facts{background:var(--em);color:var(--cream);border-top:1px solid rgba(201,169,110,.3)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.facts div{padding:30px 10px;border-right:1px solid rgba(201,169,110,.2);text-align:center}
+.facts div:last-child{border:0}
+.facts b{display:block;font-family:var(--serif);font-size:42px;color:var(--champ);font-weight:500}
+.facts span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.8}
+@media(max-width:760px){.facts .wrap{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border:0}}
+section{padding:120px 0}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+@media(max-width:900px){.intro{grid-template-columns:1fr;gap:40px}}
+.intro p{color:var(--muted);font-size:18px;font-weight:300;margin-top:20px}
+.frame{position:relative;aspect-ratio:4/5}
+.frame svg{width:100%;height:100%}
+.frame .cap{position:absolute;left:-24px;bottom:40px;background:var(--cream);padding:18px 24px;box-shadow:0 20px 50px rgba(0,0,0,.12);font-family:var(--serif);font-size:22px;font-style:italic}
+.exp{background:#efe8da}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:50px}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}}
+.cd{background:var(--cream);padding:34px 26px;border-top:2px solid var(--champ);transition:.3s}
+.cd:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.cd .ic{width:46px;height:46px;margin-bottom:20px}
+.cd h3{font-size:28px;margin-bottom:10px}.cd p{color:var(--muted);font-size:15px}
+.rooms{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin-top:50px}
+@media(max-width:900px){.rooms{grid-template-columns:1fr}}
+.rm{position:relative;min-height:420px;color:var(--cream);display:flex;align-items:flex-end;overflow:hidden}
+.rm svg{position:absolute;inset:0;width:100%;height:100%}
+.rm .t{position:relative;padding:32px;background:linear-gradient(0deg,rgba(10,25,19,.85),transparent);width:100%}
+.rm h3{font-size:36px}.rm p{opacity:.85;font-size:15px}
+.stack{display:grid;gap:28px}.stack .rm{min-height:196px}
+.events{background:var(--em);color:var(--cream)}
+.events .intro p{color:rgba(248,244,236,.78)}
+.list{margin-top:28px;border-top:1px solid rgba(201,169,110,.3)}
+.list div{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(201,169,110,.3);font-size:16px}
+.list em{font-style:normal;color:var(--champ)}
+.near{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border:1px solid var(--line)}
+.near div{padding:30px;border-right:1px solid var(--line)}.near div:last-child{border:0}
+.near b{font-family:var(--serif);font-size:30px;font-weight:500;display:block}.near span{color:var(--muted);font-size:14px}
+@media(max-width:760px){.near{grid-template-columns:1fr}.near div{border-right:0;border-bottom:1px solid var(--line)}}
+.cta{text-align:center;background:#efe8da}
+.cta p{color:var(--muted);max-width:560px;margin:18px auto 30px;font-size:18px;font-weight:300}
+footer{background:#0c1f18;color:rgba(248,244,236,.7);padding:44px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.mbar{display:none}@media(max-width:760px){.mbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:50}.mbar .btn{flex:1;text-align:center;padding:18px}body{padding-bottom:56px}}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;display:none;place-items:center;padding:20px}.modal.on{display:grid}
+.modal div{background:var(--cream);padding:34px;max-width:430px;text-align:center}.modal h3{font-size:30px;margin-bottom:10px}.modal p{color:var(--muted);margin-bottom:22px}
+.rv{opacity:0;transform:translateY(24px);transition:1s}.rv.in{opacity:1;transform:none}
+</style></head><body>
+<div class="ribbon">Design preview for <b>Humphreys Hill House</b>, prepared by Mark Parseina. Facts from public listings; photos and prices are placeholders.</div>
+<header><div class="wrap nav"><a class="logo" href="#">Humphreys Hill House<small>Kisii &middot; Kenya</small></a><nav class="links"><a href="#stay">Stay</a><a href="#experience">Experience</a><a href="#events">Events</a><a href="#find">Find us</a></nav><button class="btn" data-act>Reserve</button></div></header>
+<section class="hero" style="padding:0">
+<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f2a21"/><stop offset=".6" stop-color="#1f4a3a"/><stop offset="1" stop-color="#2c6150"/></linearGradient><radialGradient id="m" cx=".72" cy=".3" r=".4"><stop offset="0" stop-color="#e9d3a4" stop-opacity=".55"/><stop offset="1" stop-color="#e9d3a4" stop-opacity="0"/></radialGradient></defs><rect width="1440" height="900" fill="url(#s)"/><rect width="1440" height="900" fill="url(#m)"/><path d="M0 640 C220 560 380 600 560 540 S900 420 1100 480 1360 470 1440 440 V900 H0Z" fill="#245442"/><path d="M0 730 C260 660 460 700 700 650 S1120 600 1440 640 V900 H0Z" fill="#1a4234"/><path d="M0 820 C300 780 640 800 980 770 S1300 760 1440 780 V900 H0Z" fill="#11302a"/><g fill="#0c241d"><path d="M1060 520 l30 -60 l30 60z"/><path d="M1100 530 l26 -52 l26 52z"/><path d="M1280 470 l30 -66 l30 66z"/></g><g stroke="#c9a96e" stroke-width="1.2" fill="none" opacity=".45" transform="translate(330 -30)"><path d="M760 560 h240 v-80 l-120 -60 l-120 60z"/><path d="M800 560 v-60 M960 560 v-60 M880 560 v-50"/></g></svg>
+<div class="inner"><div class="eb">A garden hotel on the hill &middot; Kisii</div><h1>Rest above the <i>green hills</i> of Kisii</h1><p>Fifty rooms with their own balconies, a pool set in lush gardens, and a restaurant and bar to end the day well.</p><div class="ctas"><button class="btn" data-act>Check availability</button><a class="btn o" href="#stay">See the rooms</a></div></div>
+</section>
+<div class="facts"><div class="wrap"><div><b>50</b><span>Rooms</span></div><div><b>Every</b><span>Room has a balcony</span></div><div><b>Free</b><span>Breakfast daily</span></div><div><b>4.7 km</b><span>To Kisii Golf Course</span></div></div></div>
+
+<section id="stay"><div class="wrap intro">
+<div class="rv"><div class="eb">Your stay</div><h2>Quiet comfort, close to town</h2><p>Each room opens onto its own balcony, with free WiFi, soundproofing and breakfast every morning. Stay a night for business or a week to slow down.</p><div style="margin-top:34px"><button class="btn" style="background:var(--em);color:var(--cream)" data-act>Book direct and save</button></div></div>
+<div class="frame rv"><svg viewBox="0 0 400 500" preserveAspectRatio="none"><defs><linearGradient id="r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6b52"/><stop offset="1" stop-color="#c9a96e"/></linearGradient></defs><rect width="400" height="500" fill="url(#r)"/><rect x="40" y="60" width="320" height="200" fill="#f8f4ec" opacity=".18"/><rect x="60" y="300" width="280" height="90" rx="6" fill="#f8f4ec" opacity=".3"/><rect x="60" y="270" width="280" height="40" rx="6" fill="#f8f4ec" opacity=".45"/><text x="200" y="170" text-anchor="middle" fill="#fff" font-family="Jost" font-size="13" letter-spacing="4">YOUR ROOM PHOTO</text></svg><div class="cap">Balcony views, every room</div></div>
+</div>
+<div class="wrap rooms">
+<div class="rm rv"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice"><rect width="600" height="420" fill="#24564a"/><circle cx="460" cy="90" r="60" fill="#e9d3a4" opacity=".4"/><rect x="0" y="260" width="600" height="160" fill="#1a4234"/></svg><div class="t"><div class="eb">Most booked</div><h3>Deluxe Balcony Room</h3><p>King bed, work desk and a private balcony over the gardens.</p></div></div>
+<div class="stack"><div class="rm rv"><svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><rect width="400" height="200" fill="#2f6b52"/></svg><div class="t"><h3>Standard Room</h3><p>Everything you need for a restful night.</p></div></div><div class="rm rv"><svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><rect width="400" height="200" fill="#8a7448"/></svg><div class="t"><h3>Family Room</h3><p>Space for the whole family.</p></div></div></div>
+</div></section>
+
+<section class="exp" id="experience"><div class="wrap"><div class="eb">Experience</div><h2>More than a place to sleep</h2>
+<div class="cards">
+<div class="cd rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#163a2e" stroke-width="2"><path d="M4 32c5 0 5 4 10 4s5-4 10-4 5 4 10 4 5-4 10-4M4 40c5 0 5 4 10 4s5-4 10-4 5 4 10 4 5-4 10-4"/><path d="M16 28V8a4 4 0 0 1 8 0M30 28V8a4 4 0 0 1 8 0M16 16h14"/></svg><h3>Outdoor pool</h3><p>Swim and sun among the gardens.</p></div>
+<div class="cd rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#163a2e" stroke-width="2"><path d="M24 44V20M24 20c-8 0-14-6-14-14 8 0 14 6 14 14zM24 26c6 0 12-5 12-12-6 0-12 5-12 12z"/></svg><h3>Garden walks</h3><p>Lush grounds, a large pavilion and quiet trails.</p></div>
+<div class="cd rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#163a2e" stroke-width="2"><circle cx="24" cy="26" r="14"/><circle cx="24" cy="26" r="8"/><path d="M6 8v14M10 8v14M8 22v20M42 8c-4 2-4 10 0 14v20"/></svg><h3>Restaurant and bar</h3><p>Breakfast, dinner and drinks in the lounge.</p></div>
+<div class="cd rv"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#163a2e" stroke-width="2"><path d="M6 24h36M10 16v16M38 16v16M4 20v8M44 20v8"/></svg><h3>Fitness centre</h3><p>Keep your routine while you travel.</p></div>
+</div></div></section>
+
+<section class="events" id="events"><div class="wrap intro">
+<div class="frame rv" style="aspect-ratio:5/4"><svg viewBox="0 0 500 400" preserveAspectRatio="none"><rect width="500" height="400" fill="#24564a"/><path d="M60 300 h380 v-140 l-190 -90 l-190 90z" fill="none" stroke="#c9a96e" stroke-width="2"/><g fill="#c9a96e" opacity=".5"><circle cx="150" cy="260" r="8"/><circle cx="200" cy="260" r="8"/><circle cx="250" cy="260" r="8"/><circle cx="300" cy="260" r="8"/><circle cx="350" cy="260" r="8"/></g><text x="250" y="210" text-anchor="middle" fill="#f8f4ec" font-family="Jost" font-size="12" letter-spacing="4">YOUR PAVILION PHOTO</text></svg></div>
+<div class="rv"><div class="eb">Weddings and gatherings</div><h2>A garden pavilion for your big days</h2><p>Weddings, graduations, church retreats and company meetings, set in the gardens with catering from our kitchen.</p>
+<div class="list"><div><span>Garden weddings</span><em>Enquire</em></div><div><span>Meetings and workshops</span><em>Day packages</em></div><div><span>Graduation parties</span><em>Enquire</em></div></div>
+<div style="margin-top:30px"><button class="btn" data-act>Plan your event</button></div></div>
+</div></section>
+
+<section id="find"><div class="wrap"><div class="eb">Find us</div><h2>Easy to reach in Kisii</h2>
+<div class="near"><div><b>Kisii University</b><span>Within a 10 minute drive</span></div><div><b>Gusii Stadium</b><span>Within a 10 minute drive</span></div><div><b>Kisii Golf Course</b><span>4.7 km away</span></div></div>
+</div></section>
+<section class="cta"><div class="wrap"><div class="eb">Book direct</div><h2>Your room is waiting</h2><p>Reserve with us directly for the best rate and a personal welcome. We reply on WhatsApp within minutes.</p><button class="btn" style="background:var(--em);color:var(--cream)" data-act>Check availability</button></div></section>
+<footer><div class="wrap"><div><b style="font-family:var(--serif);font-size:22px;color:var(--cream);font-weight:500">Humphreys Hill House</b><br>Kisii, Kenya</div><div>Preview by Mark Parseina &middot; 0708 139 438</div></div></footer>
+<div class="mbar"><button class="btn" data-act>Reserve your room</button></div>
+<div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live site, this button takes the guest's dates and sends the booking straight to you, with no booking site commission.</p><button class="btn" onclick="modal.classList.remove('on')">Got it</button></div></div>
+<script>
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();modal.classList.add('on')}));
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+</script></body></html>

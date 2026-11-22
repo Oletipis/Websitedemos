@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Restaurant website preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Serif+Display&family=Noto+Serif:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141210;--bg2:#1e1a17;--ink:#f6efe6;--muted:#b9ada0;--accent:#ff7a2f;--accent2:#ffc15e;--card:#221d19;--line:#3a322b;--display:'Archivo Black',Impact,sans-serif;--sans:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,58px);margin:8px 0 14px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.lead{color:var(--muted);font-size:17px;max-width:580px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:12px;background:var(--accent);color:var(--bg);font-weight:700;font-size:15px;border:0;cursor:pointer;transition:.2s;font-family:var(--sans)}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+section{padding:90px 0}
+.ribbon{background:#000;color:#eee;font-size:13px;text-align:center;padding:9px 16px}.ribbon b{color:var(--accent2)}
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{font-family:var(--display);font-size:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.links{display:flex;gap:24px;font-size:14px;font-weight:600;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+@media(max-width:860px){.links{display:none}.nav>.btn{display:none}}
+
+/* hero */
+.hero{padding:56px 0 70px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.open{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;background:var(--card);border:1px solid var(--line);padding:8px 14px;border-radius:999px}
+.open i{width:9px;height:9px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.2)}
+.hero h1{font-size:clamp(46px,8vw,104px);margin:20px 0 18px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:18px;color:var(--muted);max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.plate{aspect-ratio:1;position:relative}
+.plate svg{width:100%;height:100%}
+.tag{position:absolute;background:var(--ink);color:var(--bg);font-weight:700;font-size:13px;padding:10px 14px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.tag small{display:block;font-weight:500;font-size:11px;opacity:.7}
+
+/* direct strip */
+.strip{background:var(--accent);color:var(--bg);padding:22px 0;overflow:hidden}
+.strip .row{display:flex;gap:46px;white-space:nowrap;font-family:var(--display);font-size:22px;animation:slide 26s linear infinite}
+.strip .row span::after{content:"\2726";margin-left:46px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* favourites */
+.favs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+@media(max-width:860px){.favs{grid-template-columns:1fr}}
+.fav{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.25s}
+.fav:hover{transform:translateY(-5px);border-color:var(--accent)}
+.fav .ph{aspect-ratio:4/3;position:relative;display:grid;place-items:center}
+.fav .ph svg{position:absolute;inset:0;width:100%;height:100%}
+.fav .ph em{position:relative;font-style:normal;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:rgba(0,0,0,.35);padding:6px 12px;border-radius:999px;color:#fff}
+.fav .b{padding:20px 22px}
+.fav h3{font-size:22px;font-family:var(--sans);font-weight:700;letter-spacing:0}
+.fav p{color:var(--muted);font-size:14px;margin:6px 0 14px}
+.fav .f{display:flex;justify-content:space-between;align-items:center}
+.heart{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:7px 12px;font:600 13px var(--sans);cursor:pointer}
+.heart.on{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+
+/* menu */
+.menu{background:var(--bg2)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 24px}
+.tabs button{background:transparent;border:1.5px solid var(--line);color:var(--ink);padding:10px 18px;border-radius:999px;font:600 14px var(--sans);cursor:pointer}
+.tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:4px 48px}
+@media(max-width:760px){.items{grid-template-columns:1fr}}
+.it{display:flex;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.it div{flex:1}.it b{font-size:17px}.it p{color:var(--muted);font-size:14px}
+.it span{font-weight:700;color:var(--accent2);white-space:nowrap}
+.note{margin-top:20px;font-size:13px;color:var(--muted)}
+
+/* why order direct */
+.why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:860px){.why .wrap{grid-template-columns:1fr}}
+.cmp{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}
+.cmp .r{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.cmp .r:last-child{border:0}
+.cmp .r b{color:var(--accent2)}
+.steps{display:grid;gap:14px;margin-top:24px}
+.steps div{display:flex;gap:14px;align-items:flex-start}
+.steps i{font-style:normal;width:34px;height:34px;flex:none;border-radius:50%;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-weight:800}
+
+/* events */
+.events .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+@media(max-width:860px){.events .grid{grid-template-columns:1fr}}
+.ev{border:1.5px solid var(--line);border-radius:20px;padding:24px}
+.ev small{color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.ev h3{font-family:var(--sans);font-size:21px;margin:8px 0 6px;letter-spacing:0}
+.ev p{color:var(--muted);font-size:14px}
+
+/* reviews + visit */
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+@media(max-width:860px){.rv{grid-template-columns:1fr}}
+.rv div{border:1px dashed var(--line);border-radius:18px;padding:22px;color:var(--muted);min-height:120px;font-size:14px}
+.big{font-family:var(--display);font-size:52px;color:var(--accent2)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:860px){.visit .wrap{grid-template-columns:1fr}}
+.hours{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+.hours .r{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hours .r.today{color:var(--accent2);font-weight:700}
+.map{border-radius:22px;overflow:hidden;min-height:320px;position:relative}
+.map svg{width:100%;height:100%;position:absolute;inset:0}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.mbar{display:none}
+@media(max-width:860px){.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:10px;padding:10px 14px;background:var(--bg);border-top:1px solid var(--line)}.mbar .btn{flex:1}body{padding-bottom:72px}}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:80;display:none;place-items:center;padding:20px}
+.modal.on{display:grid}
+.modal div{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;max-width:420px;text-align:center}
+.modal h3{font-family:var(--sans);font-size:22px;margin-bottom:10px}.modal p{color:var(--muted);margin-bottom:20px}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="ribbon">Design preview for <b data-name>Your Restaurant</b>, prepared by Mark Parseina. Menu, prices and photos are placeholders.</div>
+<header><div class="wrap nav">
+  <a href="#top" class="logo" data-name>Your Restaurant</a>
+  <nav class="links"><a href="#favs">Favourites</a><a href="#menu">Menu</a><a href="#direct">Order direct</a><a href="#events" data-evnav>Events</a><a href="#visit">Visit</a></nav>
+  <button class="btn" data-act data-ordertxt>Order now</button>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="open"><i></i><span data-opentxt>Open today, 11:00 to 23:00</span></span>
+    <h1 data-headline>Your Restaurant</h1>
+    <p data-sub>Great food, made fresh.</p>
+    <div class="ctas"><button class="btn" data-act data-ordertxt>Order on WhatsApp</button><button class="btn line" data-act data-booktxt>Book a table</button><a class="btn line" href="#menu">See the menu</a></div>
+  </div>
+  <div class="plate reveal"><svg viewBox="0 0 500 500" id="hero"></svg>
+    <div class="tag" style="left:2%;top:14%"><small>Fan favourite</small><span data-fav0>Signature dish</span></div>
+    <div class="tag" style="right:2%;bottom:12%"><small>Order direct</small>Pay with M-Pesa</div>
+  </div>
+</div></section>
+
+<div class="strip"><div class="row" id="strip"></div></div>
+
+<section id="favs"><div class="wrap">
+  <div class="eyebrow">Fan favourites</div>
+  <h2>What everyone orders</h2>
+  <p class="lead">Tap the heart on the dishes you love. The most loved ones rise to the top.</p>
+  <div class="favs" id="favgrid"></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="eyebrow">The menu</div>
+  <h2>Something for every appetite</h2>
+  <div class="tabs" id="tabs"></div>
+  <div class="items" id="items"></div>
+  <p class="note">Sample menu. Your real dishes and prices go here, and you can change them any time.</p>
+</div></section>
+
+<section class="why" id="direct"><div class="wrap">
+  <div>
+    <div class="eyebrow">Order direct</div>
+    <h2>Skip the apps. Order from us.</h2>
+    <p class="lead">When you order straight from us, more of your money goes into your food and none of it to an app.</p>
+    <div class="steps">
+      <div><i>1</i><p><b>Pick your food</b><br><span style="color:var(--muted)">Browse the menu and add what you want.</span></p></div>
+      <div><i>2</i><p><b>Send it on WhatsApp</b><br><span style="color:var(--muted)">Your order arrives with us in one tap.</span></p></div>
+      <div><i>3</i><p><b>Pay with M-Pesa</b><br><span style="color:var(--muted)">Collect it, or we bring it to you.</span></p></div>
+    </div>
+  </div>
+  <div class="cmp reveal">
+    <div class="r"><span>Order through us</span><b>Menu price</b></div>
+    <div class="r"><span>Delivery apps</span><span style="color:var(--muted)">Prices often marked up</span></div>
+    <div class="r"><span>Reply time</span><b>Minutes, on WhatsApp</b></div>
+    <div class="r"><span>Special requests</span><b>Just ask us</b></div>
+    <button class="btn" style="width:100%;margin-top:18px" data-act>Start an order</button>
+  </div>
+</div></section>
+
+<section class="events" id="events"><div class="wrap">
+  <div class="eyebrow" data-eveye>What's on</div>
+  <h2 data-evtitle>Every week at ours</h2>
+  <div class="grid" id="evgrid"></div>
+</div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+  <div class="eyebrow">Reviews</div>
+  <h2>Loved by our guests</h2>
+  <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-end;margin-top:20px"><div><div class="big">&#9733; Your rating</div><span style="color:var(--muted)">Your Google rating and review count show here</span></div></div>
+  <div class="rv"><div>Real customer review appears here.</div><div>Real customer review appears here.</div><div>Real customer review appears here.</div></div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="eyebrow">Visit us</div>
+    <h2>Come hungry</h2>
+    <p class="lead" data-place>Kenya</p>
+    <div class="hours" style="margin-top:24px" id="hours"></div>
+    <div class="ctas"><button class="btn" data-act>Get directions</button><button class="btn line" data-act>Call us</button></div>
+  </div>
+  <div class="map"><svg viewBox="0 0 500 420" preserveAspectRatio="xMidYMid slice" id="map"></svg></div>
+</div></section>
+
+<footer><div class="wrap"><div><b style="color:var(--ink)" data-name>Your Restaurant</b> &middot; <span data-place>Kenya</span></div><div>Preview by Mark Parseina &middot; 0708 139 438</div></div></footer>
+<div class="mbar"><button class="btn line" data-act data-booktxt>Book a table</button><button class="btn" data-act data-ordertxt>Order now</button></div>
+<div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live website this button opens WhatsApp with the order or booking already typed out, so customers reach you directly.</p><button class="btn" onclick="document.getElementById('modal').classList.remove('on')">Got it</button></div></div>
+
+<script>
+const q=new URLSearchParams(location.search);
+const clip=(s,n)=>(s||'').trim().slice(0,n);
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const name=clip(q.get('name'),60)||'Your Restaurant';
+const town=clip(q.get('town'),40), county=clip(q.get('county'),40);
+const style=(q.get('style')||'grill').toLowerCase();
+const place=[town,county&&county!==town?county+' County':''].filter(Boolean).join(', ')||'Kenya';
+const S={
+ grill:{vars:{'--bg':'#141210','--bg2':'#1d1916','--card':'#241e1a','--line':'#3a312a','--ink':'#f7efe5','--muted':'#b8aa9b','--accent':'#ff7a2f','--accent2':'#ffc15e','--display':"'Archivo Black',Impact,sans-serif"},
+  head:'Fire. Smoke. <span>Flavour.</span>',sub:t=>`Slow grilled meats, cold drinks and good company in ${t||'town'}. Eat in, take away or order to your door.`,
+  strip:['Nyama choma daily','Order on WhatsApp','Pay with M-Pesa','Group platters','Cold drinks'],
+  favs:[['Goat choma platter','Slow roasted, served with kachumbari and ugali'],['Kuku choma','Half chicken over open flame, with fries'],['Whole tilapia','Fried or wet fry, with ugali and greens']],
+  menu:{'Grill':[['Goat choma (1 kg)','With kachumbari and ugali'],['Beef choma (1 kg)','Tender cuts, flame grilled'],['Pork ribs','Sticky, smoky, finger licking'],['Kuku choma','Half or full chicken']],'Mains':[['Tilapia wet fry','In tomato and onion sauce'],['Beef stew','With rice or chapati'],['Matumbo fry','Slow cooked and spiced']],'Sides':[['Chips masala','Tossed in our spice mix'],['Ugali','Fresh and hot'],['Kachumbari','Tomato, onion, chilli']],'Drinks':[['Fresh juice','Passion, mango or mixed'],['Sodas','Ice cold'],['Dawa','Lime, honey and ginger']]},
+  ev:[['Fridays','Live music night','Band from 8 pm, grills on till late'],['Weekends','Family lunch','Kids eat free with a family platter'],['Big games','Match day','Screens on, buckets of drinks, grill specials']],
+  hours:[['Monday to Thursday','11:00 to 23:00'],['Friday and Saturday','11:00 to late'],['Sunday','12:00 to 22:00']]},
+ beach:{vars:{'--bg':'#0c2733','--bg2':'#0f3140','--card':'#123a4b','--line':'#24546a','--ink':'#fbf3e7','--muted':'#a9c5cf','--accent':'#ff8a65','--accent2':'#ffd59e','--display':"'DM Serif Display',Georgia,serif"},
+  head:'Sea views and <span>Swahili flavours.</span>',sub:t=>`Fresh seafood, coastal classics and cold drinks with your toes nearly in the sand in ${t||'the coast'}.`,
+  strip:['Fresh catch daily','Ocean views','Live music nights','Order on WhatsApp','Pay with M-Pesa'],
+  favs:[['Swahili fish curry','Coconut curry with rice or chapati'],['Prawns pili pili','Grilled with garlic and chilli butter'],['Seafood platter','Fish, prawns, calamari and octopus to share']],
+  menu:{'Seafood':[['Grilled snapper','Whole fish with lime and chips'],['Prawns pili pili','Garlic chilli butter'],['Octopus curry','Slow cooked in coconut'],['Calamari','Crispy rings with dip']],'Coast classics':[['Biryani','Chicken or beef, Mombasa style'],['Pilau','Spiced rice with kachumbari'],['Mshikaki','Marinated skewers']],'Light bites':[['Samosas','Beef or vegetable'],['Mahamri','Warm coconut bites'],['Viazi karai','Spiced battered potatoes']],'Drinks':[['Madafu','Fresh coconut water'],['Fresh juices','Mango, passion, watermelon'],['Cocktails','Ask for the sundowner list']]},
+  ev:[['Weekends','Live music by the beach','Bands and DJs as the sun goes down'],['Every day','Sundowner hour','Drinks offers from 5 pm to 7 pm'],['On request','Private events','Birthdays and parties on the beach']],
+  hours:[['Monday to Friday','11:00 to 23:00'],['Saturday','11:00 to late'],['Sunday','11:00 to 23:00']]},
+ asian:{vars:{'--bg':'#1a0f0e','--bg2':'#231413','--card':'#2b1816','--line':'#4a2a25','--ink':'#fbefe6','--muted':'#c9aaa0','--accent':'#e8433a','--accent2':'#f2c46d','--display':"'Noto Serif',Georgia,serif"},
+  head:'Wok fired, <span>full of flavour.</span>',sub:t=>`Classic Chinese and Asian dishes cooked fresh to order in ${t||'town'}. Eat in, take away or order to your door.`,
+  strip:['Cooked to order','Family sharing plates','Order on WhatsApp','Pay with M-Pesa','Takeaway ready fast'],
+  favs:[['Sweet and sour chicken','Crispy chicken, pineapple and peppers'],['Beef with ginger and spring onion','Wok tossed and fragrant'],['Special fried rice','Egg, prawns, chicken and vegetables']],
+  menu:{'Starters':[['Spring rolls','Vegetable or chicken'],['Hot and sour soup','Spicy, tangy, warming'],['Chicken wings','Honey garlic glaze']],'Mains':[['Sweet and sour chicken','A crowd favourite'],['Kung pao chicken','With peanuts and chilli'],['Beef in black bean sauce','Rich and savoury'],['Sizzling prawns','Served on a hot plate']],'Rice and noodles':[['Special fried rice','Something for everyone'],['Chow mein','Chicken, beef or vegetable'],['Singapore noodles','Light curry spice']],'Drinks':[['Iced tea','Lemon or peach'],['Fresh juice','Seasonal fruit'],['Sodas','Ice cold']]},
+  ev:[['Weekdays','Lunch combo','A main, rice and a drink at one price'],['Weekends','Family feast','Sharing platters for four or more'],['Any day','Private dining','Book the whole room for your event']],
+  hours:[['Monday to Saturday','11:00 to 22:30'],['Sunday','12:00 to 22:00'],['Public holidays','12:00 to 22:00']]},
+ pizza:{vars:{'--bg':'#fff8ef','--bg2':'#fbeedd','--card':'#ffffff','--line':'#efd9bd','--ink':'#2a1a12','--muted':'#7c6555','--accent':'#d93a26','--accent2':'#e0901b','--display':"'Archivo Black',Impact,sans-serif"},
+  head:'Hot, cheesy, <span>straight from the oven.</span>',sub:t=>`Fresh pizza made to order in ${t||'town'}. Eat in, pick up or get it delivered hot to your door.`,
+  strip:['Made to order','Pizza by the slice or whole','Order on WhatsApp','Pay with M-Pesa','Fast delivery'],
+  favs:[['Chicken tikka pizza','Spiced chicken, onions and peppers'],['BBQ beef pizza','Smoky sauce, beef and mozzarella'],['Margherita','Tomato, mozzarella and basil']],
+  menu:{'Pizzas':[['Margherita','The classic'],['Chicken tikka','A local favourite'],['BBQ beef','Sweet and smoky'],['Hawaiian','Ham and pineapple']],'Sides':[['Garlic bread','Warm and buttery'],['Chicken wings','Spicy or BBQ'],['Fries','Plain or masala']],'Deals':[['Two for one Tuesday','Any two mediums'],['Family deal','Two large pizzas and a soda'],['Lunch slice','A slice and a drink']],'Drinks':[['Milkshakes','Vanilla, chocolate, strawberry'],['Sodas','Ice cold'],['Fresh juice','Seasonal fruit']]},
+  ev:[['Weekdays','Lunch deal','A slice and a drink, ready in minutes'],['Weekends','Family night','Big pizzas for sharing'],['Any day','Party orders','Pizzas for birthdays and office events']],
+  hours:[['Monday to Thursday','10:00 to 22:00'],['Friday and Saturday','10:00 to 23:00'],['Sunday','11:00 to 22:00']]},
+ cafe:{vars:{'--bg':'#f6efe4','--bg2':'#efe4d4','--card':'#fffaf2','--line':'#e1d3bf','--ink':'#2b1d14','--muted':'#7a6656','--accent':'#8a4b2a','--accent2':'#b5653a','--display':"'Fraunces',Georgia,serif"},
+  head:'Good coffee, <span>sweet treats.</span>',sub:t=>`Freshly brewed coffee, desserts and light bites in ${t||'town'}. Sit in, catch up, or take it with you.`,
+  strip:['Freshly brewed','Desserts made daily','Vegetarian friendly','Order ahead on WhatsApp','Pay with M-Pesa'],
+  favs:[['Iced mocha','Espresso, chocolate and cold milk over ice'],['Sizzling brownie','Warm brownie, ice cream, hot chocolate sauce'],['Paneer wrap','Grilled, fresh and filling']],
+  menu:{'Coffee':[['Espresso','Single or double'],['Cappuccino','Velvety and smooth'],['Iced mocha','Our best seller'],['Kenyan AA filter','Local beans, slow brewed']],'Desserts':[['Sizzling brownie','With ice cream'],['Cheesecake','Ask for today’s flavour'],['Waffles','With fruit or chocolate']],'Light bites':[['Wraps','Paneer, chicken or vegetable'],['Samosas','Fresh from the kitchen'],['Toasted sandwiches','Made to order']],'Cold drinks':[['Milkshakes','Vanilla, chocolate, strawberry'],['Fresh juice','Seasonal fruit'],['Iced tea','Lemon or peach']]},
+  ev:[['Every day','Before the movie','Grab a coffee and dessert before your show'],['Weekdays','Work and coffee','Free WiFi and quiet corners'],['Any time','Celebration cakes','Order a cake for birthdays and parties']],
+  hours:[['Monday to Saturday','09:00 to 20:30'],['Sunday','09:00 to late'],['Public holidays','10:00 to 20:00']]}
+};
+const st=S[style]||S.grill;
+for(const[k,v] of Object.entries(st.vars)) document.documentElement.style.setProperty(k,v);
+const c=k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+document.title=name+' | '+(town||'Kenya');
+document.querySelectorAll('[data-name]').forEach(e=>e.textContent=name);
+document.querySelectorAll('[data-place]').forEach(e=>e.textContent=place);
+document.querySelector('[data-headline]').innerHTML=st.head;
+document.querySelector('[data-sub]').textContent=st.sub(town);
+document.querySelector('[data-fav0]').textContent=st.favs[0][0];
+document.querySelector('[data-opentxt]').textContent='Open today, '+st.hours[0][1];
+if(style==='cafe'){document.querySelectorAll('[data-booktxt]').forEach(b=>b.textContent='Reserve a table');}
+const strip=document.getElementById('strip');strip.innerHTML=[...st.strip,...st.strip,...st.strip,...st.strip].map(s=>`<span>${s}</span>`).join('');
+/* art */
+const food=(i)=>{const cols=[[c('--accent'),c('--accent2')],[c('--accent2'),c('--accent')],[c('--line'),c('--accent')]][i%3];
+ return `<defs><radialGradient id="pg${i}"><stop offset="0" stop-color="${cols[1]}"/><stop offset="1" stop-color="${cols[0]}"/></radialGradient></defs><rect width="400" height="300" fill="${c('--bg2')}"/><ellipse cx="200" cy="165" rx="130" ry="100" fill="#000" opacity=".25"/><circle cx="200" cy="150" r="110" fill="${c('--ink')}" opacity=".92"/><circle cx="200" cy="150" r="82" fill="url(#pg${i})"/><circle cx="170" cy="130" r="22" fill="${c('--bg')}" opacity=".35"/><circle cx="230" cy="170" r="16" fill="#fff" opacity=".35"/><circle cx="215" cy="120" r="9" fill="#7fb069"/><circle cx="182" cy="178" r="7" fill="#7fb069"/>`};
+document.getElementById('hero').innerHTML=`<defs><radialGradient id="hg"><stop offset="0" stop-color="${c('--accent2')}"/><stop offset=".7" stop-color="${c('--accent')}"/><stop offset="1" stop-color="${c('--accent')}" stop-opacity=".9"/></radialGradient><radialGradient id="glow"><stop offset="0" stop-color="${c('--accent')}" stop-opacity=".45"/><stop offset="1" stop-color="${c('--accent')}" stop-opacity="0"/></radialGradient></defs><circle cx="250" cy="250" r="250" fill="url(#glow)"/><circle cx="250" cy="250" r="190" fill="${c('--ink')}"/><circle cx="250" cy="250" r="168" fill="none" stroke="${c('--line')}" stroke-width="2"/><circle cx="250" cy="250" r="140" fill="url(#hg)"/><g opacity=".85"><circle cx="205" cy="210" r="38" fill="${c('--bg')}" opacity=".45"/><circle cx="295" cy="285" r="44" fill="${c('--bg')}" opacity=".35"/><circle cx="300" cy="200" r="16" fill="#7fb069"/><circle cx="210" cy="300" r="12" fill="#7fb069"/><circle cx="260" cy="240" r="10" fill="#fff" opacity=".7"/></g><text x="250" y="470" text-anchor="middle" fill="${c('--muted')}" font-family="Inter" font-size="13" letter-spacing="3" font-weight="700">YOUR FOOD PHOTO HERE</text>`;
+const fg=document.getElementById('favgrid');
+st.favs.forEach((f,i)=>{const d=document.createElement('article');d.className='fav reveal';d.innerHTML=`<div class="ph"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">${food(i)}</svg><em>Your photo here</em></div><div class="b"><h3></h3><p></p><div class="f"><span style="color:var(--accent2);font-weight:700">KES your price</span><button class="heart">&#9825; <span>0</span></button></div></div>`;d.querySelector('h3').textContent=f[0];d.querySelector('p').textContent=f[1];fg.appendChild(d)});
+document.querySelectorAll('.heart').forEach(h=>h.addEventListener('click',()=>{const n=h.querySelector('span');const on=h.classList.toggle('on');n.textContent=+n.textContent+(on?1:-1);h.firstChild.textContent=on?'♥ ':'♡ '}));
+const tabs=document.getElementById('tabs'),items=document.getElementById('items');
+const show=k=>{tabs.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.textContent===k));items.innerHTML=st.menu[k].map(m=>`<div class="it"><div><b>${esc(m[0])}</b><p>${esc(m[1])}</p></div><span>KES ___</span></div>`).join('')};
+Object.keys(st.menu).forEach(k=>{const b=document.createElement('button');b.textContent=k;b.onclick=()=>show(k);tabs.appendChild(b)});show(Object.keys(st.menu)[0]);
+document.getElementById('evgrid').innerHTML=st.ev.map(e=>`<div class="ev reveal"><small>${e[0]}</small><h3>${e[1]}</h3><p>${e[2]}</p></div>`).join('');
+const day=new Date().getDay();
+document.getElementById('hours').innerHTML=st.hours.map((h,i)=>`<div class="r${i===(day===0?2:(day>=5?1:0))?' today':''}"><span>${h[0]}</span><span>${h[1]}</span></div>`).join('')+`<p class="note">Sample hours. Yours go here.</p>`;
+document.getElementById('map').innerHTML=`<rect width="500" height="420" fill="${c('--card')}"/><g stroke="${c('--line')}" stroke-width="18" fill="none"><path d="M0 140 L500 260"/><path d="M180 0 L280 420"/><path d="M0 340 Q250 300 500 360"/></g><circle cx="245" cy="210" r="60" fill="${c('--accent')}" opacity=".18"/><path d="M245 168 c-23 0 -38 17 -38 36 c0 27 38 60 38 60 s38 -33 38 -60 c0 -19 -15 -36 -38 -36z" fill="${c('--accent')}"/><circle cx="245" cy="203" r="13" fill="${c('--bg')}"/>`;
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();document.getElementById('modal').classList.add('on')}));
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

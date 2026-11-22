@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Thiiri Centre | Meru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#3b1f3a;--plum2:#552c53;--leaf:#3f7d4e;--gold:#e0a526;--cream:#fbf7f0;--ink:#231a22;--muted:#6e6470;--line:#eadfd3;--serif:'Lora',Georgia,serif;--sans:'Outfit',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65}
+a{color:inherit;text-decoration:none}.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.08}
+h2{font-size:clamp(34px,4.6vw,54px)}
+.k{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:10px;background:var(--gold);color:var(--plum);font:700 15px var(--sans);border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.btn.p{background:var(--plum);color:#fff}
+.beads{height:12px;background:repeating-linear-gradient(90deg,#e0a526 0 12px,#3f7d4e 12px 24px,#c23b3b 24px 36px,#fff 36px 48px,#2b5fa8 48px 60px)}
+.ribbon{background:#000;color:#ddd;font-size:13px;text-align:center;padding:9px}.ribbon b{color:var(--gold)}
+header{background:var(--plum);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font-family:var(--serif);font-size:24px}.logo small{font:500 11px var(--sans);letter-spacing:.2em;opacity:.7;display:block}
+.links{display:flex;gap:26px;font-size:15px;opacity:.9}@media(max-width:860px){.links{display:none}}
+.hero{background:radial-gradient(circle at 80% 20%,var(--plum2),var(--plum) 60%);color:#fff;text-align:center;padding:90px 0 110px;position:relative;overflow:hidden}
+.hero .emb{width:120px;height:120px;margin:0 auto 26px}
+.hero h1{font-size:clamp(46px,7vw,90px);max-width:900px;margin:0 auto}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{max-width:600px;margin:22px auto 32px;font-size:19px;opacity:.88}
+.hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ring{position:absolute;border:1px solid rgba(224,165,38,.18);border-radius:50%}
+section{padding:96px 0}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-60px;position:relative;z-index:2}
+.quick div{background:#fff;border-radius:16px;padding:22px;box-shadow:0 14px 40px rgba(59,31,58,.12);border-bottom:4px solid var(--gold)}
+.quick b{display:block;font-family:var(--serif);font-size:32px;color:var(--plum)}.quick span{color:var(--muted);font-size:14px}
+@media(max-width:860px){.quick{grid-template-columns:1fr 1fr}}
+.day{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+@media(max-width:900px){.day{grid-template-columns:1fr}}
+.tl{position:relative;padding-left:34px;margin-top:10px}
+.tl::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl div{position:relative;padding:0 0 26px}
+.tl div::before{content:"";position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--cream);box-shadow:0 0 0 2px var(--gold)}
+.tl b{font-family:var(--serif);font-size:20px}.tl span{display:block;color:var(--muted);font-size:15px}
+.tl small{display:block;color:var(--leaf);font-weight:700;letter-spacing:.1em}
+.pkg{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:16px;display:flex;gap:20px;align-items:center;transition:.2s}
+.pkg:hover{border-color:var(--gold)}
+.pkg .n{width:54px;height:54px;flex:none;border-radius:14px;background:var(--plum);color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:22px;font-weight:700}
+.pkg h3{font-size:21px}.pkg p{color:var(--muted);font-size:14px}
+.kemu{background:var(--leaf);color:#fff}
+.kemu .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
+@media(max-width:900px){.kemu .wrap{grid-template-columns:1fr}}
+.kemu .big{font-family:var(--serif);font-size:clamp(80px,12vw,150px);line-height:.9;color:var(--gold)}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+@media(max-width:860px){.rooms{grid-template-columns:1fr}}
+.rm{border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.rm svg{width:100%;display:block}.rm div{padding:20px}.rm h3{font-size:22px}.rm p{color:var(--muted);font-size:14px}
+.info{background:var(--plum);color:#fff;border-radius:24px;padding:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+@media(max-width:860px){.info{grid-template-columns:1fr}}
+.info b{display:block;color:var(--gold);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+footer{padding:36px 0;color:var(--muted);font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.mbar{display:none}@media(max-width:760px){.mbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px;background:var(--cream);border-top:1px solid var(--line)}.mbar .btn{flex:1;justify-content:center}body{padding-bottom:72px}}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;display:none;place-items:center;padding:20px}.modal.on{display:grid}
+.modal div{background:var(--cream);border-radius:18px;padding:30px;max-width:420px;text-align:center}.modal h3{font-size:28px;margin-bottom:10px}.modal p{color:var(--muted);margin-bottom:20px}
+.rv{opacity:0;transform:translateY(20px);transition:.8s}.rv.in{opacity:1;transform:none}
+</style></head><body>
+<div class="ribbon">Design preview for <b>Thiiri Centre Conference Hotel</b>, prepared by Mark Parseina. Facts from public listings; photos and prices are placeholders.</div>
+<header><div class="wrap nav"><a class="logo" href="#">Thiiri Centre<small>CONFERENCE HOTEL &middot; MERU</small></a><nav class="links"><a href="#conf">Conferences</a><a href="#rooms">Rooms</a><a href="#kemu">Visiting KeMU</a><a href="#info">Info</a></nav><button class="btn" data-act>Enquire</button></div></header>
+<div class="beads"></div>
+<section class="hero"><span class="ring" style="width:600px;height:600px;left:-200px;top:-200px"></span><span class="ring" style="width:420px;height:420px;right:-120px;bottom:-160px"></span>
+<div class="wrap" style="position:relative">
+<svg class="emb" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="none" stroke="#e0a526" stroke-width="2"/><circle cx="60" cy="60" r="44" fill="none" stroke="#e0a526" stroke-width="1" stroke-dasharray="3 5"/><path d="M30 76 L52 44 L62 58 L72 46 L92 76Z" fill="#e0a526"/><circle cx="82" cy="40" r="6" fill="#fff"/></svg>
+<h1>Meetings that work. <em>Rest</em> that restores.</h1><p>A 24 room conference hotel in Meru with full breakfast every morning and a front desk open around the clock.</p>
+<div class="ctas"><button class="btn" data-act>Plan a conference</button><button class="btn p" style="background:transparent;border:1.5px solid rgba(255,255,255,.5)" data-act>Book a room</button></div></div></section>
+<div class="wrap"><div class="quick"><div><b>24</b><span>Guest rooms</span></div><div><b>Free</b><span>Full breakfast, 6:30 to 9:00</span></div><div><b>24 h</b><span>Front desk</span></div><div><b>3 km</b><span>From Kenya Methodist University</span></div></div></div>
+
+<section id="conf"><div class="wrap day">
+<div class="rv"><span class="k">Conferences</span><h2>Your conference day, handled</h2><p style="color:var(--muted);margin:14px 0 26px">Workshops, trainings and board meetings for county offices, NGOs, churches and businesses. Here is how a typical day runs.</p>
+<div class="tl"><div><small>8:00</small><b>Arrival and registration</b><span>Tea and coffee as guests settle in</span></div><div><small>10:30</small><b>Morning tea break</b><span>Snacks served outside the hall</span></div><div><small>13:00</small><b>Lunch</b><span>Hot buffet from our kitchen</span></div><div><small>16:00</small><b>Afternoon tea</b><span>A short break before closing</span></div></div></div>
+<div class="rv"><div class="pkg"><span class="n">&frac12;</span><div><h3>Half day package</h3><p>Hall, one tea break and lunch</p></div></div><div class="pkg"><span class="n">1</span><div><h3>Full day package</h3><p>Hall, two tea breaks, lunch and PA system</p></div></div><div class="pkg"><span class="n">R</span><div><h3>Residential package</h3><p>Full day, dinner, a room and breakfast</p></div></div><button class="btn p" style="margin-top:8px" data-act>Get a quote in one message</button></div>
+</div></section>
+
+<section class="kemu" id="kemu"><div class="wrap"><div class="rv"><span class="k" style="color:var(--gold)">Visiting Kenya Methodist University?</span><h2 style="margin:10px 0 16px">Stay three kilometres from campus</h2><p style="opacity:.88">Parents at graduation, visiting lecturers, exam weeks and campus events. Book early for the busy seasons and arrive to breakfast ready the next morning.</p><button class="btn" style="margin-top:24px" data-act>Book for graduation</button></div><div class="big rv">3 km</div></div></section>
+
+<section id="rooms"><div class="wrap"><span class="k">Rooms</span><h2>Simple, clean and quiet</h2>
+<div class="rooms">
+<div class="rm rv"><svg viewBox="0 0 300 180"><rect width="300" height="180" fill="#552c53"/><rect x="60" y="100" width="180" height="50" rx="6" fill="#fff" opacity=".25"/><text x="150" y="70" text-anchor="middle" fill="#fff" font-size="11" font-family="Outfit" letter-spacing="3">YOUR PHOTO</text></svg><div><h3>Single Room</h3><p>For the solo traveller, breakfast included.</p></div></div>
+<div class="rm rv"><svg viewBox="0 0 300 180"><rect width="300" height="180" fill="#3f7d4e"/><rect x="50" y="100" width="200" height="50" rx="6" fill="#fff" opacity=".25"/><text x="150" y="70" text-anchor="middle" fill="#fff" font-size="11" font-family="Outfit" letter-spacing="3">YOUR PHOTO</text></svg><div><h3>Double Room</h3><p>Extra space for couples and longer stays.</p></div></div>
+<div class="rm rv"><svg viewBox="0 0 300 180"><rect width="300" height="180" fill="#b07d14"/><rect x="40" y="100" width="100" height="50" rx="6" fill="#fff" opacity=".25"/><rect x="160" y="100" width="100" height="50" rx="6" fill="#fff" opacity=".25"/><text x="150" y="70" text-anchor="middle" fill="#fff" font-size="11" font-family="Outfit" letter-spacing="3">YOUR PHOTO</text></svg><div><h3>Twin Room</h3><p>Two beds, ideal for conference delegates.</p></div></div>
+</div></div></section>
+
+<section id="info" style="padding-top:0"><div class="wrap"><div class="info rv"><div><b>Check in</b>From 12:00 noon</div><div><b>Check out</b>By 10:00 am</div><div><b>Breakfast</b>Full breakfast, 6:30 to 9:00 am</div><div><b>Find us</b>Meru, Meru County</div><div><b>Front desk</b>Open 24 hours</div><div><b>Contact</b>Your phone, WhatsApp and email</div></div></div></section>
+<div class="beads"></div>
+<footer><div class="wrap"><div>Thiiri Centre Conference Hotel &middot; Meru</div><div>Preview by Mark Parseina &middot; 0708 139 438</div></div></footer>
+<div class="mbar"><button class="btn p" data-act>Conference</button><button class="btn" data-act>Book a room</button></div>
+<div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live site, this sends the enquiry straight to your WhatsApp or email, so you can quote fast and win the booking.</p><button class="btn p" onclick="modal.classList.remove('on')">Got it</button></div></div>
+<script>
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();modal.classList.add('on')}));
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+</script></body></html>

@@ -238,9 +238,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <div class="eyebrow reveal">Insights</div>
     <h2 class="reveal">Perspectives on Kenyan law</h2>
     <div class="posts reveal">
-      <div class="post"><small>Property</small><h3>What to check before buying land in Kenya</h3><p>The searches and documents every buyer should see before paying a deposit.</p><a href="#insights">Read more &rarr;</a></div>
-      <div class="post"><small>Employment</small><h3>Fair termination: getting the process right</h3><p>Why procedure matters as much as reason when ending an employment contract.</p><a href="#insights">Read more &rarr;</a></div>
-      <div class="post"><small>Succession</small><h3>Dying without a will: what happens next</h3><p>How estates are administered under the Law of Succession Act, and how to plan ahead.</p><a href="#insights">Read more &rarr;</a></div>
+      <div class="post"><small>Property</small><h3>What to check before buying land in Kenya</h3><p>The searches and documents every buyer should see before paying a deposit.</p><a href="#insights" class="readmore">Read more &rarr;</a></div>
+      <div class="post"><small>Employment</small><h3>Fair termination: getting the process right</h3><p>Why procedure matters as much as reason when ending an employment contract.</p><a href="#insights" class="readmore">Read more &rarr;</a></div>
+      <div class="post"><small>Succession</small><h3>Dying without a will: what happens next</h3><p>How estates are administered under the Law of Succession Act, and how to plan ahead.</p><a href="#insights" class="readmore">Read more &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -343,6 +343,7 @@ var header = document.getElementById('top');
 addEventListener('scroll',function(){header.classList.toggle('solid', scrollY>40)});
 document.getElementById('burger').onclick = function(){document.getElementById('links').classList.toggle('open')};
 document.querySelectorAll('#links a').forEach(function(a){a.onclick=function(){document.getElementById('links').classList.remove('open')}});
+document.querySelectorAll('.readmore').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();a.outerHTML='<em style="display:block;font-size:13px;opacity:.75">On your live site, the full article opens here.</em>'}));
 document.getElementById('form').onsubmit = function(e){e.preventDefault();document.getElementById('sent').style.display='block'};
 
 var io = new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});

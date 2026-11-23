@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>We Run Nairobi | Free Saturday runs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0d0f0c;--ink2:#171a15;--lime:#d7ff3a;--orange:#ff5a1f;--cream:#f4f1ea;--muted:#8b9085;--line:rgba(255,255,255,.12);--display:'Anton',Impact,sans-serif;--sans:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--ink);color:var(--cream);line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.95}
+h2{font-size:clamp(44px,7vw,92px)}
+.k{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--lime);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;background:var(--lime);color:var(--ink);font:700 15px var(--sans);border:0;cursor:pointer;transition:.25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(215,255,58,.25)}
+.btn.o{background:transparent;color:var(--cream);border:1.5px solid rgba(255,255,255,.35)}
+.btn.o:hover{border-color:var(--lime);color:var(--lime);box-shadow:none}
+.ribbon{background:var(--lime);color:var(--ink);font-size:13px;text-align:center;padding:9px 16px;font-weight:600}
+header{position:sticky;top:0;z-index:40;background:rgba(13,15,12,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--display);font-size:26px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo i{width:34px;height:34px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;color:var(--ink);font-size:15px}
+.links{display:flex;gap:30px;font-size:14px;font-weight:600}.links a:hover{color:var(--lime)}
+@media(max-width:860px){.links{display:none}.nav .btn{padding:12px 18px;font-size:14px}}
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 110px);display:flex;align-items:center;overflow:hidden;padding:60px 0}
+.hero svg.track{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero .path{fill:none;stroke:var(--lime);stroke-width:3;stroke-linecap:round;stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 4s ease forwards .4s}
+.hero .path2{stroke:var(--orange);stroke-width:2;animation-delay:1.2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .dot{fill:var(--lime);filter:drop-shadow(0 0 10px var(--lime))}
+.hero .inner{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(64px,13vw,184px);margin:6px 0 22px}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p.lead{font-size:clamp(17px,2vw,21px);max-width:560px;color:#d9d6cf}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.count{display:flex;gap:10px;margin-top:44px;flex-wrap:wrap;align-items:center}
+.count .c{background:var(--ink2);border:1px solid var(--line);border-radius:16px;padding:12px 16px;min-width:82px;text-align:center}
+.count .c b{display:block;font-family:var(--display);font-size:38px;line-height:1;color:var(--lime)}
+.count .c span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.count small{color:var(--muted);font-size:13px;margin-left:6px}
+/* marquee */
+.mq-wrap{overflow:hidden;padding:14px 0}.marq{background:var(--orange);color:var(--ink);overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.5deg);margin:10px -20px 0}
+.marq div{display:inline-block;animation:mq 26s linear infinite;font-family:var(--display);font-size:30px;letter-spacing:.04em}
+.marq span{margin:0 22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:120px 0}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:70px}
+.stats div{background:var(--ink);padding:34px 26px}
+.stats b{display:block;font-family:var(--display);font-size:clamp(44px,5vw,68px);line-height:1;color:var(--cream)}
+.stats b em{font-style:normal;color:var(--lime)}
+.stats span{color:var(--muted);font-size:14px}
+@media(max-width:760px){.stats{grid-template-columns:1fr 1fr}}
+/* saturday */
+.sat{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:stretch}
+@media(max-width:900px){.sat{grid-template-columns:1fr}}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:28px;padding:36px}
+.when{display:flex;gap:18px;align-items:flex-end;margin:10px 0 26px;flex-wrap:wrap}
+.when .day{font-family:var(--display);font-size:clamp(54px,7vw,88px);line-height:.9;color:var(--lime)}
+.when .date{font-size:18px;color:#cfcbc3;padding-bottom:8px}
+.rows div{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-top:1px solid var(--line);font-size:16px}
+.rows div span:first-child{color:var(--muted)}
+.rows em{font-style:normal;background:rgba(255,90,31,.14);color:#ffb08f;padding:2px 10px;border-radius:999px;font-size:13px}
+.rsvp{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.check{list-style:none;display:grid;gap:14px;margin-top:20px}
+.check li{display:flex;gap:14px;align-items:flex-start;font-size:16px;color:#dedad2}
+.check li:before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12l5 5 9-10' fill='none' stroke='%230d0f0c' stroke-width='3'/%3E%3C/svg%3E") center/14px no-repeat;margin-top:2px}
+/* routes */
+.tabs{display:flex;gap:10px;margin:36px 0 26px;flex-wrap:wrap}
+.tabs button{font:700 15px var(--sans);padding:12px 22px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--cream);cursor:pointer;transition:.2s}
+.tabs button.on{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.route{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+@media(max-width:900px){.route{grid-template-columns:1fr}}
+.map{background:#121510;border:1px solid var(--line);border-radius:28px;aspect-ratio:16/11;position:relative;overflow:hidden}
+.map svg{width:100%;height:100%}
+.map .grid line{stroke:rgba(255,255,255,.05)}
+.map .rp{fill:none;stroke:var(--lime);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;transition:stroke-dashoffset 1.6s ease}
+.map .runner{fill:var(--orange)}
+.map .tag{position:absolute;left:18px;top:18px;background:rgba(0,0,0,.55);padding:6px 12px;border-radius:999px;font-size:12px;color:#cfcbc3}
+.rinfo h3{font-size:clamp(60px,8vw,110px);color:var(--lime)}
+.rinfo p{color:#d6d2ca;margin:12px 0 20px;font-size:17px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}.pills span{border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:13px;color:#cfcbc3}
+/* story */
+.story{background:var(--cream);color:var(--ink)}
+.story .k{color:var(--orange)}
+.tl{margin-top:60px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+.tl:before{content:"";position:absolute;left:0;right:0;top:18px;height:2px;background:#d8d2c4}
+.tl div{position:relative;padding-top:48px}
+.tl div:before{content:"";position:absolute;top:8px;left:0;width:22px;height:22px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 6px var(--cream)}
+.tl b{font-family:var(--display);font-size:34px;display:block;line-height:1;margin-bottom:10px}
+.tl p{color:#4d5048;font-size:15px}
+@media(max-width:860px){.tl{grid-template-columns:1fr 1fr}.tl:before{display:none}}
+.quote{margin-top:80px;font-family:var(--display);font-size:clamp(34px,5vw,64px);line-height:1.05;text-transform:uppercase;max-width:1000px}
+.quote span{color:var(--orange)}
+.quote small{display:block;font:500 15px var(--sans);text-transform:none;color:#6a6d63;margin-top:16px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:12px;margin-top:44px}
+.gal div{border-radius:20px;position:relative;overflow:hidden;background:linear-gradient(135deg,#1f2a12,#0d0f0c);display:flex;align-items:flex-end;padding:16px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.gal div:nth-child(1){grid-column:span 3;grid-row:span 2;background:linear-gradient(160deg,#ff5a1f,#7a1d05)}
+.gal div:nth-child(2){grid-column:span 3;background:linear-gradient(160deg,#d7ff3a,#566b05);color:rgba(0,0,0,.55)}
+.gal div:nth-child(3){grid-column:span 2}.gal div:nth-child(4){grid-column:span 1;background:#2a2f26}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr}.gal div{grid-column:span 1!important;grid-row:span 1!important}}
+/* partners */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:50px}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr}}
+.plist{display:grid;gap:12px}
+.plist div{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border:1px solid var(--line);border-radius:18px;font-size:18px;font-weight:700}
+.plist span{font-weight:500;font-size:13px;color:var(--muted)}
+form.pf{display:grid;gap:12px}
+form.pf input,form.pf select,form.pf textarea{width:100%;background:#0f110d;border:1px solid var(--line);border-radius:14px;padding:15px 16px;color:var(--cream);font:500 15px var(--sans)}
+form.pf textarea{min-height:110px;resize:vertical}
+/* faq */
+.faq{max-width:860px;margin:40px auto 0}
+.faq details{border-top:1px solid var(--line);padding:22px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-size:19px;font-weight:700}
+.faq summary:after{content:"+";color:var(--lime);font-size:26px;line-height:1;transition:.2s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq p{color:#cfcbc3;margin-top:12px;max-width:720px}
+/* join */
+.join{text-align:center;background:radial-gradient(circle at 50% 120%,rgba(215,255,58,.22),transparent 60%)}
+.join h2{font-size:clamp(56px,11vw,150px)}
+.join p{color:#cfcbc3;max-width:540px;margin:20px auto 34px;font-size:18px}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.mbar{display:none}@media(max-width:760px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50}.mbar .btn{flex:1;justify-content:center}body{padding-bottom:80px}}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:80;display:none;place-items:center;padding:20px}.modal.on{display:grid}
+.modal>div{background:var(--ink2);border:1px solid var(--line);border-radius:24px;padding:34px;max-width:440px;text-align:center}
+.modal h3{font-size:40px;margin-bottom:10px;color:var(--lime)}.modal p{color:#cfcbc3;margin-bottom:22px}
+</style></head><body>
+<div class="ribbon">Website concept for We Run Nairobi, prepared by Mark Parseina. Facts from public news coverage; photos, start point and links are placeholders.</div>
+<header><div class="wrap nav"><a class="logo" href="#"><i>WR</i>WE RUN NAIROBI</a><nav class="links"><a href="#saturday">This Saturday</a><a href="#routes">Routes</a><a href="#story">Our story</a><a href="#partners">Partners</a><a href="#faq">First time?</a></nav><button class="btn" data-join>Run with us</button></div></header>
+
+<section class="hero" style="padding-top:60px">
+<svg class="track" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice"><path class="path" d="M-40 640 C 200 560, 260 700, 480 600 S 760 380, 960 470 S 1260 640, 1500 380"/><path class="path path2" d="M-40 720 C 260 680, 360 520, 600 560 S 980 760, 1180 600 S 1380 420, 1500 480"/><circle class="dot" r="9"><animateMotion dur="9s" repeatCount="indefinite" path="M-40 640 C 200 560, 260 700, 480 600 S 760 380, 960 470 S 1260 640, 1500 380"/></circle></svg>
+<div class="wrap inner">
+<span class="k">Free · Every Saturday · Nairobi</span>
+<h1>Nairobi wakes up <em>running.</em></h1>
+<p class="lead">The city's biggest free running community. No fees, no registration, no pace pressure. Just show up on Saturday, pick a distance and finish with coffee.</p>
+<div class="ctas"><button class="btn" data-join>I'm coming this Saturday</button><a class="btn o" href="#routes">See the routes</a></div>
+<div class="count" id="count"><div class="c"><b id="cd">0</b><span>Days</span></div><div class="c"><b id="ch">0</b><span>Hours</span></div><div class="c"><b id="cm">0</b><span>Min</span></div><div class="c"><b id="cs">0</b><span>Sec</span></div><small>until the next run starts</small></div>
+</div></section>
+<div class="mq-wrap"><div class="marq"><div><span>6 KM</span>✦<span>9 KM</span>✦<span>15 KM</span>✦<span>WALKERS WELCOME</span>✦<span>COFFEE AFTER</span>✦<span>EVERY SATURDAY</span>✦<span>6 KM</span>✦<span>9 KM</span>✦<span>15 KM</span>✦<span>WALKERS WELCOME</span>✦<span>COFFEE AFTER</span>✦<span>EVERY SATURDAY</span>✦</div></div></div>
+
+<div class="wrap"><div class="stats"><div><b>Free</b><span>Every run, always</span></div><div><b>1,200<em>+</em></b><span>Runners on our biggest day</span></div><div><b>3</b><span>Route distances, 6 to 15 km</span></div><div><b>2022</b><span>First run, with 4 of us</span></div></div></div>
+
+<section id="saturday"><div class="wrap sat">
+<div class="card">
+<span class="k">This Saturday</span>
+<div class="when"><div class="day" id="sday">Saturday</div><div class="date" id="sdate"></div></div>
+<div class="rows">
+<div><span>We set off</span><span><b>7:30 am</b></span></div>
+<div><span>Start point</span><span>Shared on Instagram each week <em>placeholder</em></span></div>
+<div><span>Distances</span><span>6 km · 9 km · 15 km</span></div>
+<div><span>Cost</span><span><b>Free</b></span></div>
+</div>
+<div class="rsvp"><button class="btn" id="ics">Add to my calendar</button><button class="btn o" data-join>Get weekly reminders</button></div>
+</div>
+<div class="card" style="background:var(--lime);color:var(--ink);border:0">
+<span class="k" style="color:var(--ink)">Your first run</span>
+<h3 style="font-size:clamp(40px,5vw,60px)">Just show up. We'll handle the rest.</h3>
+<ul class="check" style="--c:#0d0f0c">
+<li style="color:#1b1d17">No sign up and no fee. Arrive before 7:30.</li>
+<li style="color:#1b1d17">Pick 6, 9 or 15 km. Walk, jog or race, all paces run together.</li>
+<li style="color:#1b1d17">Bring water and a phone. Leave the pressure at home.</li>
+<li style="color:#1b1d17">Stay for coffee after. That's where the friendships start.</li>
+</ul>
+</div>
+</div></section>
+
+<section id="routes" style="padding-top:20px"><div class="wrap">
+<span class="k">Routes</span><h2>Pick your distance</h2>
+<div class="tabs" id="tabs"><button class="on" data-r="0">6 km</button><button data-r="1">9 km</button><button data-r="2">15 km</button></div>
+<div class="route">
+<div class="map"><span class="tag">Route map placeholder · your real route from Strava goes here</span><svg viewBox="0 0 640 440"><g class="grid" id="grid"></g><path class="rp" id="rp" d=""/><circle class="runner" r="9" id="runner"/></svg></div>
+<div class="rinfo"><h3 id="rk">6 KM</h3><p id="rd">The original loop. The distance our first four runners covered in 2022, and the perfect first Saturday.</p><div class="pills" id="rpills"></div></div>
+</div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+<span class="k">Our story</span><h2>It started with four people and a coffee</h2>
+<div class="tl">
+<div><b>Oct 2022</b><p>Emily posts on Instagram that she'll be waiting at 8 am for anyone who wants to run. Three women show up. A 6 km loop, then coffee.</p></div>
+<div><b>2023 to 2024</b><p>Word spreads. The free Saturday run becomes the city's most visible running club.</p></div>
+<div><b>Marathon run</b><p>1,300 runners join us in partnership with the Standard Chartered Nairobi Marathon.</p></div>
+<div><b>2026</b><p>Hundreds every Saturday, and a running culture that is changing how Nairobi spends its weekends.</p></div>
+</div>
+<p class="quote">“Nairobi is a party city, a feel-good city. … <span>But now we're changing the culture.”</span><small>Emily Chepkor, founder (quoted in The Star, May 2026)</small></p>
+<div class="gal"><div>Your Saturday group photo</div><div>Start line</div><div>Coffee after</div><div>Pace groups</div><div>Partner run</div><div>Finish</div></div>
+</div></section>
+
+<section id="partners"><div class="wrap">
+<span class="k">Partners</span><h2>Run with Nairobi's biggest community</h2>
+<p style="color:#cfcbc3;max-width:620px;margin-top:18px;font-size:18px">Hundreds of engaged runners every week. Brands that have run with us include:</p>
+<div class="pgrid">
+<div class="plist"><div>On <span>Lifestyle run at Windsor, Dec 2025</span></div><div>Standard Chartered Nairobi Marathon <span>Partner run, 1,300 runners</span></div><div>Nivea <span>Brand partner</span></div><div style="border-style:dashed;color:var(--muted)">Your brand here <span>Shoe trials, activations, sponsored runs</span></div></div>
+<div class="card"><h3 style="font-size:38px;margin-bottom:16px">Partner with us</h3>
+<form class="pf" onsubmit="event.preventDefault();openModal()"><input placeholder="Your name"><input placeholder="Brand or company"><select><option>Sponsored Saturday run</option><option>Product or shoe trials</option><option>Race partnership</option><option>Something else</option></select><textarea placeholder="Tell us what you have in mind"></textarea><button class="btn" style="justify-content:center">Send enquiry</button></form></div>
+</div>
+</div></section>
+
+<section id="faq" style="padding-top:20px"><div class="wrap">
+<span class="k" style="display:block;text-align:center">First time?</span><h2 style="text-align:center">Questions people ask</h2>
+<div class="faq">
+<details open><summary>Is it really free?</summary><p>Yes. Every Saturday run is free and there is no registration. Turn up, run, and stay for coffee if you like.</p></details>
+<details><summary>I'm not fast. Will I keep up?</summary><p>All paces are welcome, and walkers too. Choose the 6 km route on your first Saturday and go at your own speed.</p></details>
+<details><summary>Where do we start?</summary><p>The start point is shared each week. Follow us on Instagram or join the WhatsApp reminders so you never miss it.</p></details>
+<details><summary>What should I bring?</summary><p>Comfortable shoes, water and your phone. That is all.</p></details>
+<details><summary>Can my company host a run?</summary><p>Yes. Use the partner form above and we'll get back to you.</p></details>
+</div></div></section>
+
+<section class="join"><div class="wrap">
+<span class="k">See you Saturday</span><h2>Lace up, Nairobi</h2>
+<p>Join the weekly reminder and get the start point, route and time every week.</p>
+<button class="btn" data-join style="font-size:17px;padding:18px 32px">Join the WhatsApp reminders</button>
+</div></section>
+<footer><div class="wrap"><div><b style="color:var(--cream)">We Run Nairobi</b> · Free Saturday runs since 2022</div><div>Concept by Mark Parseina · 0708 139 438</div></div></footer>
+<div class="mbar"><button class="btn" data-join>I'm coming Saturday</button></div>
+<div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live site, this button opens your WhatsApp community, Instagram or sign up form, so new runners can find you in one tap.</p><button class="btn" onclick="document.getElementById('modal').classList.remove('on')">Got it</button></div></div>
+<script>
+function openModal(){document.getElementById('modal').classList.add('on')}
+document.querySelectorAll('[data-join]').forEach(b=>b.addEventListener('click',openModal));
+/* next Saturday 7:30 Nairobi time (UTC+3) */
+function nextRun(){const now=new Date();const eat=new Date(now.getTime()+3*36e5);let d=new Date(Date.UTC(eat.getUTCFullYear(),eat.getUTCMonth(),eat.getUTCDate(),7,30));let add=(6-eat.getUTCDay()+7)%7;d=new Date(d.getTime()+add*864e5);if(d.getTime()<=eat.getTime())d=new Date(d.getTime()+7*864e5);return new Date(d.getTime()-3*36e5)}
+const run=nextRun();
+const ds=new Date(run.getTime()+3*36e5);
+document.getElementById('sdate').textContent=ds.getUTCDate()+' '+['January','February','March','April','May','June','July','August','September','October','November','December'][ds.getUTCMonth()]+' '+ds.getUTCFullYear();
+function tick(){let s=Math.max(0,Math.floor((run-Date.now())/1000));const d=Math.floor(s/86400);s%=86400;const h=Math.floor(s/3600);s%=3600;const m=Math.floor(s/60);s%=60;cd.textContent=d;ch.textContent=String(h).padStart(2,'0');cm.textContent=String(m).padStart(2,'0');cs.textContent=String(s).padStart(2,'0')}
+tick();setInterval(tick,1000);
+document.getElementById('ics').addEventListener('click',()=>{const f=t=>t.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';const end=new Date(run.getTime()+2*36e5);
+const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//We Run Nairobi//EN','BEGIN:VEVENT','UID:'+run.getTime()+'@werunnairobi','DTSTAMP:'+f(new Date()),'DTSTART:'+f(run),'DTEND:'+f(end),'SUMMARY:We Run Nairobi Saturday run','DESCRIPTION:Free run. 6\\, 9 or 15 km. Start point shared on Instagram.','RRULE:FREQ=WEEKLY','END:VEVENT','END:VCALENDAR'].join('\r\n');
+const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download='we-run-nairobi-saturday.ics';document.body.appendChild(a);a.click();a.remove()});
+/* routes */
+const R=[{k:'6 KM',d:'The original loop. The distance our first four runners covered in 2022, and the perfect first Saturday.',p:['Beginners','Walkers welcome','Your first Saturday'],path:'M120 330 C 120 220, 220 150, 320 150 S 520 200, 520 280 S 420 380, 320 370 S 140 380, 120 330'},
+{k:'9 KM',d:'A step up for regulars, with a longer loop through the neighbourhood.',p:['Regulars','Steady pace','A longer loop'],path:'M80 360 C 80 220, 160 90, 300 90 S 560 120, 580 230 S 520 390, 400 380 S 260 300, 200 360 S 90 410, 80 360'},
+{k:'15 KM',d:'The long Saturday. For marathon builds and anyone chasing a big weekly distance.',p:['Marathon training','Long run','Big weekly distance'],path:'M60 380 C 40 260, 90 70, 240 60 S 420 120, 470 70 S 620 110, 600 240 S 560 400, 440 400 S 330 300, 260 340 S 140 420, 60 380'}];
+const g=document.getElementById('grid');for(let i=0;i<=16;i++){g.innerHTML+=`<line x1="${i*40}" y1="0" x2="${i*40}" y2="440"/>`}for(let j=0;j<=11;j++){g.innerHTML+=`<line x1="0" y1="${j*40}" x2="640" y2="${j*40}"/>`}
+const rp=document.getElementById('rp'),runner=document.getElementById('runner');let raf;
+function show(i){const r=R[i];rk.textContent=r.k;rd.textContent=r.d;rpills.innerHTML=r.p.map(x=>`<span>${x}</span>`).join('');
+rp.setAttribute('d',r.path);const L=rp.getTotalLength();rp.style.transition='none';rp.style.strokeDasharray=L;rp.style.strokeDashoffset=L;rp.getBoundingClientRect();rp.style.transition='stroke-dashoffset 1.6s ease';rp.style.strokeDashoffset=0;
+cancelAnimationFrame(raf);const t0=performance.now();(function mv(t){const p=((t-t0)/6000)%1;const pt=rp.getPointAtLength(p*L);runner.setAttribute('cx',pt.x);runner.setAttribute('cy',pt.y);raf=requestAnimationFrame(mv)})(t0);
+document.querySelectorAll('#tabs button').forEach((b,j)=>b.classList.toggle('on',j===i))}
+document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>show(+b.dataset.r)));show(0);
+</script>
+<script src="../anim.js" defer></script>
+</body></html>

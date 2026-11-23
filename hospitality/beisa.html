@@ -93,6 +93,6 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 0;font-siz
 <div class="mbar"><button class="btn" data-act>Book your room</button></div>
 <div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live site, this sends the guest's dates and plan straight to your WhatsApp or email, with no booking site commission.</p><button class="btn" onclick="modal.classList.remove('on')">Got it</button></div></div>
 <script>
-document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();modal.classList.add('on')}));
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();window.open('https://wa.me/254722454978?text='+encodeURIComponent('Hello Beisa Hotel, I would like to book a room: check in ___, check out ___, ___ guests, bed and breakfast / half board / full board.'),'_blank','noopener')}));
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
 </script></body></html>

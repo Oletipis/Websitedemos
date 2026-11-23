@@ -287,7 +287,16 @@ photo(document.getElementById('confart'),c('--brand'),c('--brand2'),'conf',`<g f
 photo(document.getElementById('dineart'),c('--accent'),c('--brand'),'dine',`<circle cx="250" cy="200" r="120" fill="#fff" opacity=".9"/><circle cx="250" cy="200" r="88" fill="${c('--accent2')}"/><circle cx="220" cy="185" r="26" fill="${c('--brand2')}" opacity=".7"/><circle cx="275" cy="215" r="30" fill="${c('--accent')}"/><circle cx="268" cy="170" r="14" fill="#fff" opacity=".6"/><rect x="85" y="110" width="8" height="180" rx="4" fill="#fff" opacity=".8"/><rect x="405" y="110" width="8" height="180" rx="4" fill="#fff" opacity=".8"/>`);
 photo(document.getElementById('mapart'),'#e9e3d6','#ddd4c2','map',`<g stroke="#fff" stroke-width="16" fill="none"><path d="M0 120 L500 260"/><path d="M160 0 L260 400"/><path d="M0 320 Q250 280 500 340"/></g><g stroke="#c9bfab" stroke-width="2" fill="none"><path d="M0 60 L500 120"/><path d="M380 0 L330 400"/></g><circle cx="250" cy="200" r="46" fill="${c('--accent')}" opacity=".2"/><path d="M250 160 c-22 0 -36 16 -36 34 c0 26 36 58 36 58 s36 -32 36 -58 c0 -18 -14 -34 -36 -34z" fill="${c('--brand')}"/><circle cx="250" cy="194" r="12" fill="#fff"/>`);
 
-document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();document.getElementById('modal').classList.add('on')}));
+
+function waNum(s){s=(s||'').replace(/\D/g,'');if(s.startsWith('0'))s='254'+s.slice(1);return /^254\d{9}$/.test(s)?s:''}
+function openWA(num,msg){window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank','noopener')}
+const WAN=waNum(q.get('wa'));
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();
+ if(!WAN){document.getElementById('modal').classList.add('on');return}
+ const g=document.querySelector('.book select').value,d1=document.getElementById('d1').value,d2=document.getElementById('d2').value;
+ const room=b.closest('.room')?b.closest('.room').querySelector('h3').textContent+', ':'';
+ openWA(WAN,`Hello ${name}, I would like to book: ${room}check in ${d1}, check out ${d2}, ${g}. Is it available?`)}));
+if(WAN)document.querySelector('.modal p').textContent='';
 const t=new Date(),t2=new Date(Date.now()+864e5),f=d=>d.toISOString().slice(0,10);
 document.getElementById('d1').value=f(t);document.getElementById('d2').value=f(t2);
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});

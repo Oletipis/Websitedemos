@@ -278,7 +278,18 @@ document.getElementById('evgrid').innerHTML=st.ev.map(e=>`<div class="ev reveal"
 const day=new Date().getDay();
 document.getElementById('hours').innerHTML=st.hours.map((h,i)=>`<div class="r${i===(day===0?2:(day>=5?1:0))?' today':''}"><span>${h[0]}</span><span>${h[1]}</span></div>`).join('')+`<p class="note">Sample hours. Yours go here.</p>`;
 document.getElementById('map').innerHTML=`<rect width="500" height="420" fill="${c('--card')}"/><g stroke="${c('--line')}" stroke-width="18" fill="none"><path d="M0 140 L500 260"/><path d="M180 0 L280 420"/><path d="M0 340 Q250 300 500 360"/></g><circle cx="245" cy="210" r="60" fill="${c('--accent')}" opacity=".18"/><path d="M245 168 c-23 0 -38 17 -38 36 c0 27 38 60 38 60 s38 -33 38 -60 c0 -19 -15 -36 -38 -36z" fill="${c('--accent')}"/><circle cx="245" cy="203" r="13" fill="${c('--bg')}"/>`;
-document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();document.getElementById('modal').classList.add('on')}));
+
+function waNum(s){s=(s||'').replace(/\D/g,'');if(s.startsWith('0'))s='254'+s.slice(1);return /^254\d{9}$/.test(s)?s:''}
+function openWA(num,msg){window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank','noopener')}
+const WAN=waNum(q.get('wa'));
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();
+ if(!WAN){document.getElementById('modal').classList.add('on');return}
+ const t=b.textContent.toLowerCase();
+ const liked=[...document.querySelectorAll('.heart.on')].map(h=>h.closest('.fav').querySelector('h3').textContent);
+ const msg=/book|reserve/.test(t)?`Hello ${name}, I would like to book a table for ___ people on ___ at ___.`:
+  /direction|call/.test(t)?`Hello ${name}, could you share your location and directions?`:
+  `Hello ${name}, I would like to order: ${liked.length?liked.join(', '):'___'}. Pickup or delivery to ___.`;
+ openWA(WAN,msg)}));
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>

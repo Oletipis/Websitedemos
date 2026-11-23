@@ -106,6 +106,6 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 <div class="mbar"><button class="btn" data-act>Order ahead</button></div>
 <div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live site, this opens WhatsApp with the order typed out, straight to your counter.</p><button class="btn" onclick="modal.classList.remove('on')">Got it</button></div></div>
 <script>
-document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();modal.classList.add('on')}));
+document.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();window.open('https://wa.me/254711565490?text='+encodeURIComponent('Hello Cafe Mocha, I would like to pre order: ___. I will collect at ___ before my movie.'),'_blank','noopener')}));
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
 </script></body></html>

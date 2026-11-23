@@ -130,16 +130,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .modal>div{background:var(--ink2);border:1px solid var(--line);border-radius:24px;padding:34px;max-width:440px;text-align:center}
 .modal h3{font-size:40px;margin-bottom:10px;color:var(--lime)}.modal p{color:#cfcbc3;margin-bottom:22px}
 .mq-wrap{position:relative}
-.runx{position:absolute;left:0;top:0;z-index:3;width:80px;height:96px;pointer-events:none;animation:runx 7s linear infinite}
+.runx{position:absolute;left:0;top:10px;z-index:3;width:69px;height:96px;pointer-events:none;animation:runx 7s linear infinite}
 @keyframes runx{from{transform:translateX(-90px)}to{transform:translateX(calc(100vw + 20px))}}
-.runx svg{width:100%;height:100%;overflow:visible;animation:bob .42s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(-4px)}}
-.runx .lm{stroke:var(--lime);stroke-width:7;stroke-linecap:round;fill:none}
-.runx .lm.b{stroke:#9fbf1f}
-.runx .sw{transform-box:view-box;animation:sw .42s ease-in-out infinite alternate}
-.runx .sw.r{animation-direction:alternate-reverse}
-.runx .al{transform-origin:40px 30px}.runx .lg{transform-origin:36px 52px}
-@keyframes sw{from{transform:rotate(-38deg)}to{transform:rotate(38deg)}}
+.runx svg{width:100%;height:100%;overflow:visible}
+.runx .bd{animation:bob .3s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.runx g{transform-box:view-box}
+.runx .th{transform-origin:50px 74px;animation:th .6s linear infinite}
+.runx .sh{transform-origin:50px 98px;animation:sh .6s linear infinite}
+.runx .ua{transform-origin:52px 42px;animation:ua .6s ease-in-out infinite}
+.runx .fa{transform-origin:52px 59px;animation:fa .6s ease-in-out infinite}
+.runx .far{animation-delay:-.3s}
+@keyframes th{0%{transform:rotate(-38deg)}25%{transform:rotate(-4deg)}50%{transform:rotate(30deg)}70%{transform:rotate(8deg)}85%{transform:rotate(-34deg)}100%{transform:rotate(-38deg)}}
+@keyframes sh{0%{transform:rotate(12deg)}25%{transform:rotate(18deg)}50%{transform:rotate(38deg)}70%{transform:rotate(108deg)}85%{transform:rotate(70deg)}100%{transform:rotate(12deg)}}
+@keyframes ua{0%,100%{transform:rotate(36deg)}50%{transform:rotate(-42deg)}}
+@keyframes fa{0%,100%{transform:rotate(-62deg)}50%{transform:rotate(-96deg)}}
 @media(prefers-reduced-motion:reduce){.runx{display:none}}
 
 /* interactive routes */
@@ -210,7 +215,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="ctas"><button class="btn" data-join>I'm coming this Saturday</button><a class="btn o" href="#routes">See the routes</a></div>
 <div class="count" id="count"><div class="c"><b id="cd">0</b><span>Days</span></div><div class="c"><b id="ch">0</b><span>Hours</span></div><div class="c"><b id="cm">0</b><span>Min</span></div><div class="c"><b id="cs">0</b><span>Sec</span></div><small>until Saturday's 6:00 am start</small></div>
 </div></section>
-<div class="mq-wrap"><div class="runx" aria-hidden="true"><svg viewBox="0 0 70 84"><g class="sw r lg"><path class="lm b" d="M36 52 L30 66 L22 78"/></g><g class="sw r al"><path class="lm b" d="M40 30 L30 40 L36 48"/></g><path class="lm" d="M44 16 L36 52"/><circle cx="47" cy="9" r="7" fill="var(--lime)"/><g class="sw lg"><path class="lm" d="M36 52 L44 66 L38 80"/></g><g class="sw al"><path class="lm" d="M40 30 L50 38 L58 32"/></g></svg></div><div class="marq"><div><span>6 KM</span>✦<span>9 KM</span>✦<span>15 KM</span>✦<span>WALKERS WELCOME</span>✦<span>COFFEE AFTER</span>✦<span>EVERY SATURDAY</span>✦<span>6 KM</span>✦<span>9 KM</span>✦<span>15 KM</span>✦<span>WALKERS WELCOME</span>✦<span>COFFEE AFTER</span>✦<span>EVERY SATURDAY</span>✦</div></div></div>
+<div class="mq-wrap"><div class="runx" aria-hidden="true"><svg viewBox="0 0 100 140"><g class="bd"><g transform="rotate(5 50 74)"><g class="ua far"><path d="M52 42 L52 59" stroke="#6e4529" stroke-width="7.5" stroke-linecap="round"/><path d="M47 39 L57 39 L56 48 L48 48 Z" fill="#a9cc2a"/><g class="fa far"><path d="M52 59 L52 73" stroke="#6e4529" stroke-width="6.5" stroke-linecap="round"/><circle cx="52" cy="75" r="4" fill="#6e4529"/></g></g><g class="th far"><path d="M50 74 L50 98" stroke="#6e4529" stroke-width="10" stroke-linecap="round"/><path d="M44 72 L56 72 L56 86 L44 86 Z" fill="#1f2a44" rx="3"/><g class="sh far"><path d="M50 98 L50 122" stroke="#6e4529" stroke-width="8" stroke-linecap="round"/><path d="M50 116 L50 123" stroke="#a9cc2a" stroke-width="8.5" stroke-linecap="round"/><path d="M44 121 Q44 128 49 129 L62 129 Q66 129 65 125 Q60 121 55 121 Z" fill="#bdb8ad"/><path d="M44 128 L65 128" stroke="#1b120c" stroke-width="1.6" stroke-linecap="round"/></g></g><path d="M44 40 Q52 34 60 40 L60 62 Q58 74 52 75 L44 74 Q41 60 44 40 Z" fill="#d7ff3a"/><path d="M44 66 L59 68" stroke="#b5d92c" stroke-width="2"/><text x="51.5" y="57" font-family="Anton,Impact,sans-serif" font-size="7" fill="#0d0f0c" text-anchor="middle">WRN</text><g class="th near"><path d="M50 74 L50 98" stroke="#8a5a3b" stroke-width="10" stroke-linecap="round"/><path d="M44 72 L56 72 L56 86 L44 86 Z" fill="#2b3a5e" rx="3"/><g class="sh near"><path d="M50 98 L50 122" stroke="#8a5a3b" stroke-width="8" stroke-linecap="round"/><path d="M50 116 L50 123" stroke="#d7ff3a" stroke-width="8.5" stroke-linecap="round"/><path d="M44 121 Q44 128 49 129 L62 129 Q66 129 65 125 Q60 121 55 121 Z" fill="#f4f1ea"/><path d="M44 128 L65 128" stroke="#1b120c" stroke-width="1.6" stroke-linecap="round"/></g></g><path d="M54 30 L55 38" stroke="#8a5a3b" stroke-width="6" stroke-linecap="round"/><ellipse cx="56" cy="22" rx="9" ry="10" fill="#8a5a3b"/><path d="M64 22 Q67 24 64.5 26" fill="#8a5a3b" stroke="#6e4529" stroke-width=".8"/><path d="M47 21 Q46 11 56 11 Q65 11 65 18 Q60 15 55 17 Q51 18 50 23 Z" fill="#1b120c"/><ellipse cx="53" cy="23" rx="2" ry="2.6" fill="#6e4529"/><circle cx="61.5" cy="20.5" r="1.1" fill="#1b120c"/><path d="M60 28.5 Q62.5 29.5 64 28" stroke="#3a2214" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M47 17 Q56 13 65 17" stroke="#ff5a1f" stroke-width="2.6" fill="none" stroke-linecap="round"/><g class="ua near"><path d="M52 42 L52 59" stroke="#8a5a3b" stroke-width="7.5" stroke-linecap="round"/><path d="M47 39 L57 39 L56 48 L48 48 Z" fill="#d7ff3a"/><g class="fa near"><path d="M52 59 L52 73" stroke="#8a5a3b" stroke-width="6.5" stroke-linecap="round"/><circle cx="52" cy="75" r="4" fill="#8a5a3b"/></g></g></g></g></svg></div><div class="marq"><div><span>6 KM</span>✦<span>9 KM</span>✦<span>15 KM</span>✦<span>WALKERS WELCOME</span>✦<span>COFFEE AFTER</span>✦<span>EVERY SATURDAY</span>✦<span>6 KM</span>✦<span>9 KM</span>✦<span>15 KM</span>✦<span>WALKERS WELCOME</span>✦<span>COFFEE AFTER</span>✦<span>EVERY SATURDAY</span>✦</div></div></div>
 
 <div class="wrap"><div class="stats"><div><b>Free</b><span>Every run, always</span></div><div><b>1,200<em>+</em></b><span>Runners on our biggest day</span></div><div><b>3</b><span>Route distances, 6 to 15 km</span></div><div><b>2022</b><span>First run, with 4 of us</span></div></div></div>
 

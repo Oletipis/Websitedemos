@@ -88,7 +88,7 @@
   /* photos below the hero wipe in */
   d.querySelectorAll('img').forEach(function(im){
     if (hero && hero.contains(im)) return;
-    if (im.closest('header,footer,.logo')) return;
+    if (im.closest('header,footer,.logo') || im.hasAttribute('data-noanim')) return;
     if (im.naturalWidth && im.naturalWidth < 80) return;
     im.loading = 'eager'; im.classList.add('an-img');
     var par = im.parentNode;

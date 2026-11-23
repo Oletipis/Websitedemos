@@ -140,7 +140,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <h1>Nairobi wakes up <em>running.</em></h1>
 <p class="lead">The city's biggest free running community. No fees, no registration, no pace pressure. Just show up on Saturday, pick a distance and finish with coffee.</p>
 <div class="ctas"><button class="btn" data-join>I'm coming this Saturday</button><a class="btn o" href="#routes">See the routes</a></div>
-<div class="count" id="count"><div class="c"><b id="cd">0</b><span>Days</span></div><div class="c"><b id="ch">0</b><span>Hours</span></div><div class="c"><b id="cm">0</b><span>Min</span></div><div class="c"><b id="cs">0</b><span>Sec</span></div><small>until the next run starts</small></div>
+<div class="count" id="count"><div class="c"><b id="cd">0</b><span>Days</span></div><div class="c"><b id="ch">0</b><span>Hours</span></div><div class="c"><b id="cm">0</b><span>Min</span></div><div class="c"><b id="cs">0</b><span>Sec</span></div><small>until Saturday's 6:00 am start</small></div>
 </div></section>
 <div class="mq-wrap"><div class="marq"><div><span>6 KM</span>✦<span>9 KM</span>✦<span>15 KM</span>✦<span>WALKERS WELCOME</span>✦<span>COFFEE AFTER</span>✦<span>EVERY SATURDAY</span>✦<span>6 KM</span>✦<span>9 KM</span>✦<span>15 KM</span>✦<span>WALKERS WELCOME</span>✦<span>COFFEE AFTER</span>✦<span>EVERY SATURDAY</span>✦</div></div></div>
 
@@ -151,7 +151,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <span class="k">This Saturday</span>
 <div class="when"><div class="day" id="sday">Saturday</div><div class="date" id="sdate"></div></div>
 <div class="rows">
-<div><span>We set off</span><span><b>7:30 am</b></span></div>
+<div><span>Start times</span><span><b>6:00 am and 7:30 am</b></span></div>
 <div><span>Start point</span><span>Shared on Instagram each week <em>placeholder</em></span></div>
 <div><span>Distances</span><span>6 km · 9 km · 15 km</span></div>
 <div><span>Cost</span><span><b>Free</b></span></div>
@@ -162,7 +162,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <span class="k" style="color:var(--ink)">Your first run</span>
 <h3 style="font-size:clamp(40px,5vw,60px)">Just show up. We'll handle the rest.</h3>
 <ul class="check" style="--c:#0d0f0c">
-<li style="color:#1b1d17">No sign up and no fee. Arrive before 7:30.</li>
+<li style="color:#1b1d17">No sign up and no fee. Pick the 6:00 or 7:30 start.</li>
 <li style="color:#1b1d17">Pick 6, 9 or 15 km. Walk, jog or race, all paces run together.</li>
 <li style="color:#1b1d17">Bring water and a phone. Leave the pressure at home.</li>
 <li style="color:#1b1d17">Stay for coffee after. That's where the friendships start.</li>
@@ -223,14 +223,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 function openModal(){document.getElementById('modal').classList.add('on')}
 document.querySelectorAll('[data-join]').forEach(b=>b.addEventListener('click',openModal));
 /* next Saturday 7:30 Nairobi time (UTC+3) */
-function nextRun(){const now=new Date();const eat=new Date(now.getTime()+3*36e5);let d=new Date(Date.UTC(eat.getUTCFullYear(),eat.getUTCMonth(),eat.getUTCDate(),7,30));let add=(6-eat.getUTCDay()+7)%7;d=new Date(d.getTime()+add*864e5);if(d.getTime()<=eat.getTime())d=new Date(d.getTime()+7*864e5);return new Date(d.getTime()-3*36e5)}
+function nextRun(){const now=new Date();const eat=new Date(now.getTime()+3*36e5);let d=new Date(Date.UTC(eat.getUTCFullYear(),eat.getUTCMonth(),eat.getUTCDate(),6,0));let add=(6-eat.getUTCDay()+7)%7;d=new Date(d.getTime()+add*864e5);if(d.getTime()<=eat.getTime())d=new Date(d.getTime()+7*864e5);return new Date(d.getTime()-3*36e5)}
 const run=nextRun();
 const ds=new Date(run.getTime()+3*36e5);
 document.getElementById('sdate').textContent=ds.getUTCDate()+' '+['January','February','March','April','May','June','July','August','September','October','November','December'][ds.getUTCMonth()]+' '+ds.getUTCFullYear();
 function tick(){let s=Math.max(0,Math.floor((run-Date.now())/1000));const d=Math.floor(s/86400);s%=86400;const h=Math.floor(s/3600);s%=3600;const m=Math.floor(s/60);s%=60;cd.textContent=d;ch.textContent=String(h).padStart(2,'0');cm.textContent=String(m).padStart(2,'0');cs.textContent=String(s).padStart(2,'0')}
 tick();setInterval(tick,1000);
 document.getElementById('ics').addEventListener('click',()=>{const f=t=>t.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';const end=new Date(run.getTime()+2*36e5);
-const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//We Run Nairobi//EN','BEGIN:VEVENT','UID:'+run.getTime()+'@werunnairobi','DTSTAMP:'+f(new Date()),'DTSTART:'+f(run),'DTEND:'+f(end),'SUMMARY:We Run Nairobi Saturday run','DESCRIPTION:Free run. 6\\, 9 or 15 km. Start point shared on Instagram.','RRULE:FREQ=WEEKLY','END:VEVENT','END:VCALENDAR'].join('\r\n');
+const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//We Run Nairobi//EN','BEGIN:VEVENT','UID:'+run.getTime()+'@werunnairobi','DTSTAMP:'+f(new Date()),'DTSTART:'+f(run),'DTEND:'+f(end),'SUMMARY:We Run Nairobi Saturday run','DESCRIPTION:Free run. Starts at 6:00 and 7:30. 6\\, 9 or 15 km. Start point shared on Instagram.','RRULE:FREQ=WEEKLY','END:VEVENT','END:VCALENDAR'].join('\r\n');
 const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download='we-run-nairobi-saturday.ics';document.body.appendChild(a);a.click();a.remove()});
 /* routes */
 const R=[{k:'6 KM',d:'The original loop. The distance our first four runners covered in 2022, and the perfect first Saturday.',p:['Beginners','Walkers welcome','Your first Saturday'],path:'M120 330 C 120 220, 220 150, 320 150 S 520 200, 520 280 S 420 380, 320 370 S 140 380, 120 330'},

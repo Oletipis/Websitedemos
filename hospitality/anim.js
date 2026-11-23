@@ -72,7 +72,7 @@
     es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('an-on'); io.unobserve(e.target); } });
   }, {threshold: .12, rootMargin: '0px 0px -40px 0px'});
 
-  var groups = '.cards,.tiles,.rooms,.houses,.now,.near,.grid,.grid3,.stats,.facts .wrap,.facts,.list,.timeline,.tl,.menu-list,.chips,.amen,.pk,.packages';
+  var groups = '.cards,.tiles,.rooms,.houses,.now,.near,.grid,.grid3,.stats,.facts .wrap,.facts,.list,.timeline,.tl,.menu-list,.chips,.amen,.pk,.packages,.practice,.values,.posts,.people,.areas,.team,.services,.insights,.row2';
   d.querySelectorAll(groups).forEach(function(g){
     if (hero && hero.contains(g)) return;
     [].slice.call(g.children).forEach(function(c, i){
@@ -83,7 +83,7 @@
   });
 
   /* lift on hover for cards */
-  d.querySelectorAll('.cd,.tile,.rm,.h,.poster,.card,.room,.pkg,.dish').forEach(function(c){ c.classList.add('an-hov'); });
+  d.querySelectorAll('.cd,.tile,.rm,.h,.poster,.card,.room,.pkg,.dish,.fav,.area,.post,.value,.person,.member').forEach(function(c){ c.classList.add('an-hov'); });
 
   /* photos below the hero wipe in */
   d.querySelectorAll('img').forEach(function(im){

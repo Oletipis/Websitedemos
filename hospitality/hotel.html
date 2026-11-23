@@ -47,6 +47,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(255,253,248,.92);backdro
 /* hero */
 .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
 .hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.hero.hasphoto::after{background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,.7) 100%)!important}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.45) 100%)}
 .hero .inner{position:relative;z-index:2;padding:0 24px 56px;max-width:1160px;margin:0 auto;width:100%}
 .hero .eyebrow{color:var(--accent2)}
@@ -227,6 +228,7 @@ footer b{color:#fff;font-family:var(--serif);font-size:20px}
 <div class="mbar"><button class="btn line" style="color:var(--brand)" data-act>Call us</button><button class="btn" data-act>Book direct</button></div>
 <div class="modal" id="modal"><div><h3>This is a preview</h3><p>On your live website this button sends the guest straight to your WhatsApp or booking form, with their dates filled in. No booking site in the middle.</p><button class="btn" onclick="document.getElementById('modal').classList.remove('on')">Got it</button></div></div>
 
+<script src="photos.js"></script>
 <script>
 const q=new URLSearchParams(location.search);
 const clip=(s,n)=>(s||'').trim().slice(0,n);
@@ -286,6 +288,16 @@ document.getElementById('amen').innerHTML=st.amen.map(a=>`<span>${a}</span>`).jo
 photo(document.getElementById('confart'),c('--brand'),c('--brand2'),'conf',`<g fill="#fff" opacity=".9"><rect x="70" y="70" width="360" height="150" rx="8" opacity=".18"/></g><g fill="#fff" opacity=".3">${[0,1,2,3].map(r=>[0,1,2,3,4].map(k=>`<circle cx="${110+k*70}" cy="${260+r*30}" r="10"/>`).join('')).join('')}</g><text x="250" y="155" text-anchor="middle" fill="#fff" font-family="Manrope" font-size="15" font-weight="700" letter-spacing="3">YOUR EVENT PHOTO</text>`);
 photo(document.getElementById('dineart'),c('--accent'),c('--brand'),'dine',`<circle cx="250" cy="200" r="120" fill="#fff" opacity=".9"/><circle cx="250" cy="200" r="88" fill="${c('--accent2')}"/><circle cx="220" cy="185" r="26" fill="${c('--brand2')}" opacity=".7"/><circle cx="275" cy="215" r="30" fill="${c('--accent')}"/><circle cx="268" cy="170" r="14" fill="#fff" opacity=".6"/><rect x="85" y="110" width="8" height="180" rx="4" fill="#fff" opacity=".8"/><rect x="405" y="110" width="8" height="180" rx="4" fill="#fff" opacity=".8"/>`);
 photo(document.getElementById('mapart'),'#e9e3d6','#ddd4c2','map',`<g stroke="#fff" stroke-width="16" fill="none"><path d="M0 120 L500 260"/><path d="M160 0 L260 400"/><path d="M0 320 Q250 280 500 340"/></g><g stroke="#c9bfab" stroke-width="2" fill="none"><path d="M0 60 L500 120"/><path d="M380 0 L330 400"/></g><circle cx="250" cy="200" r="46" fill="${c('--accent')}" opacity=".2"/><path d="M250 160 c-22 0 -36 16 -36 34 c0 26 36 58 36 58 s36 -32 36 -58 c0 -18 -14 -34 -36 -34z" fill="${c('--brand')}"/><circle cx="250" cy="194" r="12" fill="#fff"/>`);
+
+/* real photos */
+const PH=(window.PHOTOS||{})[(q.get('p')||'').toLowerCase()];
+if(PH){const mk=(src,alt,css)=>{const i=new Image();i.src=src;i.alt=alt;i.style.cssText=css||'position:absolute;inset:0;width:100%;height:100%;object-fit:cover';return i};
+ if(PH.hero){const h=document.querySelector('.hero');h.prepend(mk(PH.hero,name));scene.style.display='none';h.classList.add('hasphoto')}
+ (PH.rooms||[]).forEach((src,i)=>{const r=roomgrid.children[i];if(!r)return;const ph=r.querySelector('.ph');ph.innerHTML='';ph.appendChild(mk(src,r.querySelector('h3').textContent))});
+ if(PH.conf){const a=document.getElementById('confart');a.replaceWith(mk(PH.conf,'Events at '+name,'display:block;width:100%;height:100%;object-fit:cover'))}
+ if(PH.dine){const a=document.getElementById('dineart');a.replaceWith(mk(PH.dine,'Dining at '+name,'display:block;width:100%;height:100%;object-fit:cover'))}
+ const rb=document.querySelector('.ribbon');if(rb)rb.innerHTML=rb.innerHTML.replace('Photos and prices are placeholders','Photos from public listings; prices are placeholders');
+}
 
 
 function waNum(s){s=(s||'').replace(/\D/g,'');if(s.startsWith('0'))s='254'+s.slice(1);return /^254\d{9}$/.test(s)?s:''}
